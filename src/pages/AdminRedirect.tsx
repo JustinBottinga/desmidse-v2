@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 export default function AdminRedirect() {
   useEffect(() => {
-    window.location.replace("/admin/index.html");
+    window.location.replace("/admin/");
   }, []);
 
   return (
@@ -11,7 +11,7 @@ export default function AdminRedirect() {
       <p className="text-muted-foreground">
         Je wordt doorgestuurd naar de Decap CMS editor.
       </p>
-      <a className="text-primary underline" href="/admin/index.html">
+      <a className="text-primary underline" href="/admin/">
         Open de editor handmatig
       </a>
     </div>
