@@ -72,6 +72,20 @@ export default function Header() {
               Over ons
             </NavLink>
 
+            <NavLink
+              to="/blog"
+              className={({ isActive }) =>
+                cn(
+                  "text-sm font-medium transition-colors",
+                  isActive
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground"
+                )
+              }
+            >
+              Blog
+            </NavLink>
+
             {/* Onze diensten dropdown (custom, no Radix) */}
             <div className="relative" ref={menuRef}>
               <button
@@ -209,6 +223,20 @@ export default function Header() {
               onClick={() => setMobileOpen(false)}
             >
               Over ons
+            </NavLink>
+            <NavLink
+              to="/blog"
+              className={({ isActive }) =>
+                cn(
+                  "block rounded-sm px-2 py-2 text-sm",
+                  isActive
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground"
+                )
+              }
+              onClick={() => setMobileOpen(false)}
+            >
+              Blog
             </NavLink>
             <div>
               <div className="px-2 py-2 text-sm font-medium text-muted-foreground">

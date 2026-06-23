@@ -51,6 +51,13 @@ export default function Breadcrumbs() {
       list.push({ label: "Contact", href: "/contact" });
       return list;
     }
+    if (parts[0] === "blog") {
+      list.push({ label: "Blog", href: "/blog" });
+      if (parts[1]) {
+        list.push({ label: parts[1], href: `/blog/${parts[1]}` });
+      }
+      return list;
+    }
     if (parts[0] === "diensten") {
       list.push({ label: "Diensten", href: "/diensten" });
       if (parts[1]) {

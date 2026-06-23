@@ -1,0 +1,42 @@
+backend:
+  name: github
+  repo: JustinBottinga/desmidse-v2
+  branch: main
+
+media_folder: "public/media/uploads"
+public_folder: "/media/uploads"
+
+site_url: /
+display_url: /
+logo_url: /media/logo.png
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    label_singular: "Blogbericht"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    summary: "{{title}}"
+    fields:
+      - label: "Titel"
+        name: "title"
+        widget: "string"
+      - label: "Intro"
+        name: "excerpt"
+        widget: "text"
+        required: false
+      - label: "Afbeelding"
+        name: "image"
+        widget: "image"
+        required: false
+      - label: "Publicatiedatum"
+        name: "date"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
