@@ -2,9 +2,8 @@ backend:
   name: github
   repo: JustinBottinga/desmidse-v2
   branch: main
-  auth_scope: repo
   auth_type: pkce
-  app_id: "Iv23liGlEYmXFL8Bzc6C"
+  app_id: Iv23liGlEYmXFL8Bzc6C
 
 media_folder: "public/media/uploads"
 public_folder: "/media/uploads"
