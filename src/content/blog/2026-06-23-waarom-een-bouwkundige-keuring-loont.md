@@ -1,8 +1,9 @@
 ---
-title: "Waarom een bouwkundige keuring loont"
-excerpt: "Een korte, praktische uitleg over wat een keuring oplevert voor kopers en verkopers."
-date: "2026-06-23"
-image: "/media/hero-placeholder.svg"
+title: Waarom een bouwkundige keuring loont
+excerpt: Een korte, praktische uitleg over wat een keuring oplevert voor kopers
+  en verkopers.
+image: /media/uploads/51.jpg
+date: 2026-06-23
 ---
 
 ## Waarom deze pagina bestaat
