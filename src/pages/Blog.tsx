@@ -36,7 +36,10 @@ export default function Blog() {
             {blogPosts.map((post) => {
               const published = formatDate(post.date);
               return (
-                <article key={post.slug} className="rounded-2xl border bg-white p-6">
+                <article
+                  key={post.slug}
+                  className="rounded-2xl border bg-white p-6"
+                >
                   <p className="text-xs uppercase tracking-widest text-muted-foreground">
                     {published || "Onbekende datum"}
                   </p>

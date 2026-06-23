@@ -100,11 +100,17 @@ export default function BlogPost() {
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <article className="space-y-6">
-          <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            components={markdownComponents}
+          >
             {post.body}
           </ReactMarkdown>
           <div>
-            <Link to="/blog" className="text-sm font-medium text-blue-700 hover:underline">
+            <Link
+              to="/blog"
+              className="text-sm font-medium text-blue-700 hover:underline"
+            >
               Terug naar overzicht
             </Link>
           </div>

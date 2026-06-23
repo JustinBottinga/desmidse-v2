@@ -51,7 +51,7 @@ export default function Header() {
                   "text-sm font-medium transition-colors",
                   isActive
                     ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground"
+                    : "text-muted-foreground hover:text-foreground",
                 )
               }
             >
@@ -65,7 +65,7 @@ export default function Header() {
                   "text-sm font-medium transition-colors",
                   isActive
                     ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground"
+                    : "text-muted-foreground hover:text-foreground",
                 )
               }
             >
@@ -79,7 +79,7 @@ export default function Header() {
                   "text-sm font-medium transition-colors",
                   isActive
                     ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground"
+                    : "text-muted-foreground hover:text-foreground",
                 )
               }
             >
@@ -94,7 +94,7 @@ export default function Header() {
                   "inline-flex items-center text-sm font-medium transition-colors",
                   dienstenActive || open
                     ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground"
+                    : "text-muted-foreground hover:text-foreground",
                 )}
                 aria-haspopup="menu"
                 aria-expanded={open}
@@ -104,7 +104,7 @@ export default function Header() {
                 <svg
                   className={cn(
                     "ml-2 h-3 w-3 transition-transform",
-                    open ? "rotate-180" : "rotate-0"
+                    open ? "rotate-180" : "rotate-0",
                   )}
                   viewBox="0 0 20 20"
                   fill="currentColor"
@@ -132,7 +132,7 @@ export default function Header() {
                               "block rounded-sm px-3 py-2 text-sm transition-colors",
                               isActive
                                 ? "bg-accent text-accent-foreground"
-                                : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                                : "text-muted-foreground hover:bg-accent hover:text-accent-foreground",
                             )
                           }
                           onClick={() => setOpen(false)}
@@ -153,7 +153,7 @@ export default function Header() {
                   "text-sm font-medium transition-colors",
                   isActive
                     ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground"
+                    : "text-muted-foreground hover:text-foreground",
                 )
               }
             >
@@ -203,7 +203,7 @@ export default function Header() {
                   "block rounded-sm px-2 py-2 text-sm",
                   isActive
                     ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground"
+                    : "text-muted-foreground hover:text-foreground",
                 )
               }
               onClick={() => setMobileOpen(false)}
@@ -217,7 +217,7 @@ export default function Header() {
                   "block rounded-sm px-2 py-2 text-sm",
                   isActive
                     ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground"
+                    : "text-muted-foreground hover:text-foreground",
                 )
               }
               onClick={() => setMobileOpen(false)}
@@ -231,7 +231,7 @@ export default function Header() {
                   "block rounded-sm px-2 py-2 text-sm",
                   isActive
                     ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground"
+                    : "text-muted-foreground hover:text-foreground",
                 )
               }
               onClick={() => setMobileOpen(false)}
@@ -252,7 +252,7 @@ export default function Header() {
                           "block rounded-sm px-2 py-2 text-sm",
                           isActive
                             ? "text-foreground"
-                            : "text-muted-foreground hover:text-foreground"
+                            : "text-muted-foreground hover:text-foreground",
                         )
                       }
                       onClick={() => setMobileOpen(false)}
@@ -270,7 +270,7 @@ export default function Header() {
                   "block rounded-sm px-2 py-2 text-sm",
                   isActive
                     ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground"
+                    : "text-muted-foreground hover:text-foreground",
                 )
               }
               onClick={() => setMobileOpen(false)}

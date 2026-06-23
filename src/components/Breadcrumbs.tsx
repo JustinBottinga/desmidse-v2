@@ -105,7 +105,7 @@ export default function Breadcrumbs() {
                     type="button"
                     className={cn(
                       "inline-flex items-center rounded-sm px-2 py-1 hover:bg-accent hover:text-accent-foreground",
-                      open ? "bg-accent text-accent-foreground" : ""
+                      open ? "bg-accent text-accent-foreground" : "",
                     )}
                     aria-haspopup="menu"
                     aria-expanded={open}
@@ -115,7 +115,7 @@ export default function Breadcrumbs() {
                     <svg
                       className={cn(
                         "ml-1 h-3 w-3",
-                        open ? "rotate-180" : "rotate-0"
+                        open ? "rotate-180" : "rotate-0",
                       )}
                       viewBox="0 0 20 20"
                       fill="currentColor"
@@ -143,7 +143,7 @@ export default function Breadcrumbs() {
                                   "block rounded-sm px-3 py-2 text-sm transition-colors",
                                   isActive
                                     ? "bg-accent text-accent-foreground"
-                                    : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                                    : "text-muted-foreground hover:bg-accent hover:text-accent-foreground",
                                 )
                               }
                               onClick={() => setOpen(false)}
