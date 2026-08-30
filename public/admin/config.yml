@@ -2,6 +2,10 @@ backend:
   name: git-gateway
   branch: main
 
+# Wijzigingen komen eerst als concept op een aparte branch en gaan pas live
+# na op "Publiceren" te klikken.
+publish_mode: editorial_workflow
+
 # Alleen actief op localhost: `npx decap-server` naast `npm run dev`
 local_backend: true
 

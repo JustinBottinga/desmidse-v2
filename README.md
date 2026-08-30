@@ -43,3 +43,14 @@ in plaats van met een GitHub-account. Eenmalig instellen in de Netlify-site:
 
 De uitnodigingsmail linkt naar de site; na het instellen van een wachtwoord stuurt de site
 automatisch door naar `/admin/`.
+
+## Publiceren
+
+Het CMS staat in *editorial workflow*: opslaan zet een wijziging als concept op een aparte
+branch, er gebeurt dan nog niets op de live site. Onder de tab **Workflow** sleep je een
+wijziging naar *Klaar* en klik je op **Publiceren**; pas dan wordt het naar `main` gemerged
+en bouwt Netlify de site opnieuw.
+
+Zet in Netlify onder *Build & deploy → Continuous deployment* de **deploy previews uit**
+en **branch deploys op "None"**. Anders bouwt Netlify ook elk concept, en levert het
+uitstellen van publiceren geen deploys op.
