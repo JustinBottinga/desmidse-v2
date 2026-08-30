@@ -44,7 +44,7 @@ function parseMarkdown(source: string, slug: string): BlogPost {
     title: frontmatter.title ?? "Blog",
     excerpt: frontmatter.excerpt ?? "",
     date: frontmatter.date ?? "",
-    image: frontmatter.image ?? "/media/hero-placeholder.svg",
+    image: frontmatter.image ?? "/media/uploads/hero-placeholder.svg",
     body: content.trimStart(),
   };
 }
@@ -70,4 +70,44 @@ export const blogPosts: BlogPost[] = Object.entries(blogFiles)
 
 export function getBlogPostBySlug(slug: string) {
   return blogPosts.find((post) => post.slug === slug);
+}
+
+export type ContentColumn = {
+  label?: string;
+  tekst: string;
+};
+
+export type ContentSection = {
+  kop?: string;
+  intro?: string;
+  kolommen?: ContentColumn[];
+  tekst?: string;
+  scheidingslijn?: boolean;
+};
+
+export type Dienst = {
+  slug: string;
+  volgorde: number;
+  menuLabel: string;
+  titel: string;
+  subtitel?: string;
+  intro?: string;
+  afbeelding?: string;
+  secties?: ContentSection[];
+};
+
+const dienstFiles = import.meta.glob<Omit<Dienst, "slug">>(
+  "../content/diensten/*.json",
+  { import: "default", eager: true }
+);
+
+export const diensten: Dienst[] = Object.entries(dienstFiles)
+  .map(([filePath, dienst]) => {
+    const fileName = filePath.split("/").pop() ?? "";
+    return { ...dienst, slug: fileName.replace(/\.json$/, "") };
+  })
+  .sort((a, b) => a.volgorde - b.volgorde);
+
+export function getDienstBySlug(slug: string) {
+  return diensten.find((dienst) => dienst.slug === slug);
 }

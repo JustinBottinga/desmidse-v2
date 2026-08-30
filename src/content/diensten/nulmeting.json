@@ -1,0 +1,27 @@
+{
+  "volgorde": 4,
+  "menuLabel": "Nulmeting",
+  "titel": "Nulmeting",
+  "subtitel": "Jeroen Klikkert",
+  "intro": "Wordt er binnenkort met bouwwerkzaamheden gestart in de directe omgeving van uw woning of bedrijfspand? Denk hierbij aan een grote verbouwing bij de buren of heiwerkzaamheden, graafwerkzaamheden, baggerwerken en dergelijke.",
+  "afbeelding": "/media/uploads/hero-placeholder.svg",
+  "secties": [
+    {
+      "kop": "Hoe gaat de Nulmeting te werk",
+      "kolommen": [
+        {
+          "label": "Discussie(s) Achteraf",
+          "tekst": "Om discussie achteraf te voorkomen over eventuele schade kan het zinvol zijn om voor aanvang van de werkzaamheden een nulmeting uit te laten voeren. Met de nulmeting van De Smidse BTA voeren we een gedegen bouwkundige opname uit. Zowel van het interieur als het exterieur. Ook inspecteren wij eventuele risicoonderdelen. Met digitaal beeldmateriaal leggen wij alles zorgvuldig voor u vast in het rapport."
+        },
+        {
+          "label": "Bewijslast en Acceptatie",
+          "tekst": "De nulmetingen van De Smidse BTA zijn te gebruiken als bewijslast en worden als zodanig geaccepteerd. De nulmetingen zijn dus onafhankelijk en neutraal. Het rapport dat voorkomt uit de nulmeting kan als bewijslast dienen tegen diegene die aansprakelijk is voor de schade aan uw pand."
+        },
+        {
+          "label": "Kosten Nulmeting",
+          "tekst": "Object met een inhoud tot 400 m³\\\n**€ 350,- incl. 21% BTW**\n\nObject met een inhoud 401 m³ t/m 750 m³\\\n**€ 400,- incl. 21% BTW**\n\nObject met een inhoud 751 m³ t/m 1000 m³\\\n**€ 450,- incl. 21% BTW**\n\nObject met een inhoud groter dan 1000 m³\\\n**prijs op aanvraag**"
+        }
+      ]
+    }
+  ]
+}

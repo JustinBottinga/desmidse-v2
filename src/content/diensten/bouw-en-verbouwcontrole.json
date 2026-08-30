@@ -1,0 +1,37 @@
+{
+  "volgorde": 6,
+  "menuLabel": "Bouw en verbouw controle",
+  "titel": "Controle tijdens bouw/verbouw",
+  "subtitel": "wanneer controleren?",
+  "intro": "Wanneer laat je een controle tijdens de bouw/verbouw uitvoeren? Heb je vragen of twijfels over de verloop van de bouw en wil je dat een bouwkundige de bouw beoordeelt? Dan is een controle of meerdere controlepunten tijdens de bouw een goede keus. Tijdens de bouw zijn 3 handige momenten om een keuring al te laten voeren.",
+  "afbeelding": "/media/uploads/hero-placeholder.svg",
+  "secties": [
+    {
+      "kop": "De 3 controle fases",
+      "kolommen": [
+        {
+          "label": "Fase 1: Start Bouw Eerste Verdieping",
+          "tekst": "Voordat het moment dat de eerste verdieping gebouwd wordt is het meest ideale moment voor de controle uit te voeren. Dit is het moment dat de wanden staan en de eerste verdiepisvloer gelegd is. Vaak wordt er dan begonnen met de bouw van de sloepen en wordt er gestart, met balken en het metselwerk van de buitengevel."
+        },
+        {
+          "label": "Fase 2: Bij Nieuwe Casco",
+          "tekst": "Dit is het beste moment voor een controle tijdens de bouw als nu de woning staat. Na het optrekken van de buitenmuren en het isoleren van de buitenkant worden nu ook de dakplaten en de kozijnen geplaatst."
+        },
+        {
+          "label": "Fase 3: Woning Wind- en Waterdicht",
+          "tekst": "Na de woning wind en waterdicht is, is de dakbedekking er op na te kijken en de afbouw van de woning. Op dit moment van de bouw valt er veel te controleren, omdat er in de afbouw vaak dingen moeten staan in de afwerking."
+        }
+      ],
+      "tekst": "**Tip:**\\\nOverleg met wel met de aannemer wanneer u de keuring wilt laten voeren. De aannemer kan bekijken welk moment qua veiligheid en planning het best uitkomt.\n\n**Eindresultaat:**\\\nDe bevindingen van de bouwkundige krijgt u in een rapport onderbouwd met fotos van de eventuele gebreken en het advies over de te nemen vervolg stappen.",
+      "scheidingslijn": true
+    },
+    {
+      "kolommen": [
+        {
+          "label": "Kosten Controle Tijdens Bouw/Verbouw",
+          "tekst": "- Basistarief voor 1 uur: **€ 290,- inclusief 21% BTW**\n- Meerprijs per extra half uur: **€ 50,- inclusief 21% BTW**\n\nMeerprijs op Ameland, Schiermonnikoog, Texel, Vlieland of Terschelling: **€ 200,- inclusief 21% BTW**"
+        }
+      ]
+    }
+  ]
+}

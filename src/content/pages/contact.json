@@ -1,0 +1,24 @@
+{
+  "titel": "Contact",
+  "openingstijden": {
+    "kop": "Openingstijden",
+    "regels": ["Maandag t/m vrijdag", "van 08:00 t/m 19:00 uur"]
+  },
+  "adres": {
+    "kop": "Adres",
+    "bedrijfsnaam": "De Smidse BTA",
+    "straat": "Smidsstraat 30",
+    "postcode": "7686 BL",
+    "plaats": "Daarlerveen"
+  },
+  "gegevens": {
+    "email": "info@desmidsebta.nl",
+    "telefoon": "06 290 80 748",
+    "telefoonNummer": "0629080748",
+    "kvk": "08159387"
+  },
+  "document": {
+    "label": "Download hier een kopie van onze algemene leveringsvoorwaarden",
+    "bestand": "/media/algemene-leveringsvoorwaarden.pdf"
+  }
+}
