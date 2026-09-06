@@ -72,7 +72,7 @@ export default function Header() {
               Over ons
             </NavLink>
 
-            <NavLink
+            {/* <NavLink
               to="/blog"
               className={({ isActive }) =>
                 cn(
@@ -84,7 +84,7 @@ export default function Header() {
               }
             >
               Blog
-            </NavLink>
+            </NavLink> */}
 
             {/* Onze diensten dropdown (custom, no Radix) */}
             <div className="relative" ref={menuRef}>
