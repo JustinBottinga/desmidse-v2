@@ -1,9 +1,13 @@
 backend:
-  name: github
-  repo: JustinBottinga/desmidse-v2
+  name: git-gateway
   branch: main
-  auth_type: pkce
-  app_id: Iv23liGlEYmXFL8Bzc6C
+
+# Wijzigingen komen eerst als concept op een aparte branch en gaan pas live
+# na op "Publiceren" te klikken.
+publish_mode: editorial_workflow
+
+# Alleen actief op localhost: `npx decap-server` naast `npm run dev`
+local_backend: true
 
 media_folder: "public/media/uploads"
 public_folder: "/media/uploads"
@@ -12,7 +16,168 @@ site_url: https://www.desmidsebta.nl
 display_url: https://www.desmidsebta.nl
 logo_url: https://www.desmidsebta.nl/media/logo.png
 
+locale: nl
+
 collections:
+  - name: "home"
+    label: "Home"
+    label_singular: "Homepagina"
+    files:
+      - name: "home"
+        label: "Homepagina"
+        file: "src/content/pages/home.json"
+        fields:
+          - label: "Dienstenkaart"
+            name: "dienstenKaart"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Introzin", name: "intro", widget: "string" }
+              - label: "Lijstitems"
+                name: "items"
+                widget: "list"
+                field: { label: "Item", name: "item", widget: "string" }
+          - label: "Kaart 'Wij werken voor'"
+            name: "overKaart"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Subtitel", name: "subtitel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+          - label: "Belkaart"
+            name: "belKaart"
+            widget: "object"
+            fields:
+              - { label: "Kop", name: "kop", widget: "string" }
+              - { label: "Telefoon (weergave)", name: "telefoonLabel", widget: "string" }
+              - { label: "Telefoonnummer (om te bellen)", name: "telefoonNummer", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
+              - { label: "Knoptekst", name: "knopLabel", widget: "string" }
+          - label: "Keurmerken"
+            name: "keurmerken"
+            widget: "object"
+            fields:
+              - { label: "Kop", name: "kop", widget: "string" }
+              - label: "Kolommen"
+                name: "kolommen"
+                widget: "list"
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Tekst", name: "tekst", widget: "markdown" }
+
+  - name: "over-ons"
+    label: "Over ons"
+    label_singular: "Over ons"
+    files:
+      - name: "over-ons"
+        label: "Over ons"
+        file: "src/content/pages/about.json"
+        fields:
+          - label: "Header"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Afbeelding", name: "afbeelding", widget: "image" }
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Subtitel", name: "subtitel", widget: "string", required: false }
+              - { label: "Introtekst", name: "intro", widget: "text", required: false }
+          - label: "Secties"
+            name: "secties"
+            widget: "list"
+            summary: "{{fields.kop}}"
+            fields:
+              - { label: "Kop", name: "kop", widget: "string", required: false }
+              - { label: "Introzin boven de kolommen", name: "intro", widget: "string", required: false }
+              - label: "Kolommen"
+                name: "kolommen"
+                widget: "list"
+                required: false
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Label", name: "label", widget: "string", required: false }
+                  - { label: "Tekst", name: "tekst", widget: "markdown" }
+              - { label: "Tekst onder de kolommen", name: "tekst", widget: "markdown", required: false }
+              - { label: "Scheidingslijn eronder", name: "scheidingslijn", widget: "boolean", required: false, default: false }
+
+  - name: "contact"
+    label: "Contact"
+    label_singular: "Contactpagina"
+    files:
+      - name: "contact"
+        label: "Contactgegevens"
+        file: "src/content/pages/contact.json"
+        fields:
+          - { label: "Paginatitel", name: "titel", widget: "string" }
+          - label: "Openingstijden"
+            name: "openingstijden"
+            widget: "object"
+            fields:
+              - { label: "Kop", name: "kop", widget: "string" }
+              - label: "Regels"
+                name: "regels"
+                widget: "list"
+                field: { label: "Regel", name: "regel", widget: "string" }
+          - label: "Adres"
+            name: "adres"
+            widget: "object"
+            fields:
+              - { label: "Kop", name: "kop", widget: "string" }
+              - { label: "Bedrijfsnaam", name: "bedrijfsnaam", widget: "string" }
+              - { label: "Straat en huisnummer", name: "straat", widget: "string" }
+              - { label: "Postcode", name: "postcode", widget: "string" }
+              - { label: "Plaats", name: "plaats", widget: "string" }
+          - label: "Gegevens"
+            name: "gegevens"
+            widget: "object"
+            fields:
+              - { label: "E-mailadres", name: "email", widget: "string" }
+              - { label: "Telefoon (weergave)", name: "telefoon", widget: "string" }
+              - { label: "Telefoonnummer (om te bellen)", name: "telefoonNummer", widget: "string" }
+              - { label: "KvK-nummer", name: "kvk", widget: "string" }
+          - label: "Downloadlink"
+            name: "document"
+            widget: "object"
+            fields:
+              - { label: "Linktekst", name: "label", widget: "string", required: false }
+              - { label: "Bestand", name: "bestand", widget: "file", required: false }
+
+  - name: "diensten"
+    label: "Diensten"
+    label_singular: "Dienst"
+    folder: "src/content/diensten"
+    create: true
+    extension: "json"
+    format: "json"
+    slug: "{{slug}}"
+    summary: "{{menuLabel}}"
+    sortable_fields: ["volgorde", "titel"]
+    fields:
+      - { label: "Volgorde in het menu", name: "volgorde", widget: "number", value_type: "int", min: 1 }
+      - { label: "Menulabel", name: "menuLabel", widget: "string", hint: "Zoals de dienst in het menu en de footer verschijnt." }
+      - { label: "Titel", name: "titel", widget: "string" }
+      - { label: "Subtitel", name: "subtitel", widget: "string", required: false }
+      - { label: "Introtekst", name: "intro", widget: "text", required: false }
+      - { label: "Header-afbeelding", name: "afbeelding", widget: "image", required: false }
+      - label: "Secties"
+        name: "secties"
+        widget: "list"
+        required: false
+        summary: "{{fields.kop}}"
+        fields:
+          - { label: "Kop", name: "kop", widget: "string", required: false }
+          - { label: "Introzin boven de kolommen", name: "intro", widget: "string", required: false }
+          - label: "Kolommen"
+            name: "kolommen"
+            widget: "list"
+            required: false
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "Label", name: "label", widget: "string", required: false }
+              - { label: "Tekst", name: "tekst", widget: "markdown" }
+          - { label: "Tekst onder de kolommen", name: "tekst", widget: "markdown", required: false }
+          - { label: "Scheidingslijn eronder", name: "scheidingslijn", widget: "boolean", required: false, default: false }
+
   - name: "blog"
     label: "Blog"
     label_singular: "Blogbericht"
@@ -23,22 +188,32 @@ collections:
     format: "frontmatter"
     summary: "{{title}}"
     fields:
-      - label: "Titel"
-        name: "title"
-        widget: "string"
-      - label: "Intro"
-        name: "excerpt"
-        widget: "text"
-        required: false
-      - label: "Afbeelding"
-        name: "image"
-        widget: "image"
-        required: false
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Intro", name: "excerpt", widget: "text", required: false }
+      - { label: "Afbeelding", name: "image", widget: "image", required: false }
       - label: "Publicatiedatum"
         name: "date"
         widget: "datetime"
         date_format: "YYYY-MM-DD"
         time_format: false
-      - label: "Body"
-        name: "body"
-        widget: "markdown"
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "overige-paginas"
+    label: "Overige pagina's"
+    label_singular: "Pagina"
+    files:
+      - name: "diensten-overzicht"
+        label: "Diensten - overzichtspagina"
+        file: "src/content/pages/diensten.json"
+        fields:
+          - { label: "Titel", name: "titel", widget: "string" }
+          - { label: "Introtekst", name: "intro", widget: "text" }
+      - name: "blog-overzicht"
+        label: "Blog - overzichtspagina"
+        file: "src/content/pages/blog.json"
+        fields:
+          - { label: "Titel", name: "titel", widget: "string" }
+          - { label: "Subtitel", name: "subtitel", widget: "string" }
+          - { label: "Introtekst", name: "intro", widget: "text" }
+          - { label: "Standaard header-afbeelding", name: "afbeelding", widget: "image" }
+          - { label: "Tekst als er geen berichten zijn", name: "leegTekst", widget: "string" }

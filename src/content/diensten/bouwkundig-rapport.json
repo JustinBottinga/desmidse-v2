@@ -1,0 +1,23 @@
+{
+  "volgorde": 5,
+  "menuLabel": "Bouwkundig rapport met NHG",
+  "titel": "Bouwkundig rapport met NHG",
+  "subtitel": "NTA 8060/NEN 2767",
+  "intro": "Het NTA 8060 rapport is een normering om op een objectieve visuele manier en op een eenvoudige wijze de integrale technische kwaliteit van een woning, of bedrijfspand te beoordelen en deze vast te leggen in een NTA bouwkundig rapport. Hierdoor bent u verzekerd van een rapport dat geschikt is voor aankoop/verkoop en het verkrijgen van een hypotheek met Nationale Hypotheek Garantie. Dit rapport geeft u een duidelijk inzicht in de technische staat van uw woning of bedrijfspand en geeft ook direct de staat van het onderhoud aan.",
+  "afbeelding": "/media/uploads/hero-placeholder.svg",
+  "secties": [
+    {
+      "kop": "Rapport voor verkrijgen NHG-garantie",
+      "kolommen": [
+        {
+          "label": "Wat kijken we na",
+          "tekst": "- Fundering\n- Kruipruimte en/of kelder (ventilatie indien van toepassing en toegankelijk)\n- Riolering (indien van toepassing en bereikbaar)\n- Balken, vloerdelen en/of constructie\n- Cv-ketel\n- Brandveiligheid\n- Metalen en houten constructiedelen per verdieping\n- Kozijnen, ramen en buitendeuren per verdieping\n- Beglazing/waterwering en ventilatie per verdieping\n- Buizijnen, ramen en binnendeuren per verdieping\n- Vloeren, plafonds en wanden per verdieping\n- Keuken, badkamer, toilet en sanitair per verdieping\n- Controle op asbesthoudende materialen. Alleen visueel.\n- Aanwezigheid olietank/soptank."
+        },
+        {
+          "label": "Kosten Integrale Woninginspectie met NTA 8060 Norm",
+          "tekst": "Bouwkundige keuring tot 400 m³\\\n**€ 340,-**\n\nBij elke +100 m³ een toeslag van\\\n**€ 30,-**\n\n*Bij appartementen keurt de bouwexpert alleen het prive gedeelte.*"
+        }
+      ]
+    }
+  ]
+}

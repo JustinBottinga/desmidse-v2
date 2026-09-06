@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { services } from "@/lib/diensten";
+import contact from "@/content/pages/contact.json";
 
 export default function Footer() {
   return (
@@ -9,31 +10,36 @@ export default function Footer() {
           {/* Contact Information */}
           <div className="space-y-4">
             <div>
-              <h3 className="text-lg font-semibold mb-2">Adres</h3>
-              <p>De Smidse BTA</p>
-              <p>Smidsstraat 30</p>
-              <p>7686 BL Daarlerveen</p>
+              <h3 className="text-lg font-semibold mb-2">{contact.adres.kop}</h3>
+              <p>{contact.adres.bedrijfsnaam}</p>
+              <p>{contact.adres.straat}</p>
+              <p>
+                {contact.adres.postcode} {contact.adres.plaats}
+              </p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-2">Contact</h3>
+              <h3 className="text-lg font-semibold mb-2">{contact.titel}</h3>
               <p>
                 <span className="text-gray-400">e-mail: </span>
                 <a
-                  href="mailto:info@desmidsebta.nl"
+                  href={`mailto:${contact.gegevens.email}`}
                   className="hover:text-blue-400"
                 >
-                  info@desmidsebta.nl
+                  {contact.gegevens.email}
                 </a>
               </p>
               <p>
                 <span className="text-gray-400">telefoon: </span>
-                <a href="tel:0629080748" className="hover:text-blue-400">
-                  06 290 80 748
+                <a
+                  href={`tel:${contact.gegevens.telefoonNummer}`}
+                  className="hover:text-blue-400"
+                >
+                  {contact.gegevens.telefoon}
                 </a>
               </p>
               <p>
                 <span className="text-gray-400">KvK: </span>
-                08159387
+                {contact.gegevens.kvk}
               </p>
             </div>
           </div>

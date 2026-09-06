@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import { blogPosts } from "@/lib/content";
 import { Link } from "react-router-dom";
+import blogPagina from "@/content/pages/blog.json";
 
 function formatDate(dateString: string) {
   if (!dateString) return "";
@@ -17,10 +18,10 @@ export default function Blog() {
   return (
     <div>
       <Hero
-        image={latest?.image ?? "/media/hero-placeholder.svg"}
-        title="Blog"
-        subtitle="Nieuws en inzichten"
-        paragraph="Beheer deze berichten in Decap CMS onder /admin."
+        image={latest?.image ?? blogPagina.afbeelding}
+        title={blogPagina.titel}
+        subtitle={blogPagina.subtitel}
+        paragraph={blogPagina.intro}
       />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -28,7 +29,7 @@ export default function Blog() {
           <div className="rounded-xl border border-dashed p-8 text-center">
             <h2 className="text-xl font-semibold">Nog geen berichten</h2>
             <p className="mt-2 text-sm text-muted-foreground">
-              Voeg je eerste blogbericht toe via /admin.
+              {blogPagina.leegTekst}
             </p>
           </div>
         ) : (

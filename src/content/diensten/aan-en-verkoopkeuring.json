@@ -1,0 +1,45 @@
+{
+  "volgorde": 2,
+  "menuLabel": "Aan- en Verkoopkeuring",
+  "titel": "Aan- en Verkoopkeuring",
+  "subtitel": "De mening van uw dromen in dan?",
+  "intro": "Als u de woning van uw dromen gevonden heeft dan kan het afsluiten van een lening (en beslissing van een verbouwing aan uw woning) een bouwkundige keuring vereist zijn. De kredietverstrekker wil ook graag de huidige staat van het huis en eventuele verbouwingskosten weten... u natuurlijk ook! Onze inspecteurs helpen u hier graag mee.",
+  "afbeelding": "/media/uploads/hero-placeholder.svg",
+  "secties": [
+    {
+      "kop": "Wij helpen u met:",
+      "kolommen": [
+        {
+          "label": "Aankoopkeuring",
+          "tekst": "Een aankoopkeuring voorkomt de koop van een woning met bouwkundige gebreken, die u veel geld kunnen gaan kosten. Middels deze aankoopkeuring kunnen wij u inzicht geven in het onderhoud dat u de komende 5 jaar kunt verwachten. Ook kunnen wij een prijsindicatie geven van het te verwachten onderhoud."
+        },
+        {
+          "label": "Veilig en Zonder Problemen",
+          "tekst": "Maak van de aankoop van uw woning of bedrijfspand geen risico. Met een aankoopkeuring van De Smidse BTA koopt u veilig en zonder problemen:\n\n- volledig onafhankelijk\n- NHG geschikt\n- Rapport 5 dagen na inspectie\n- Hersteladvies in duidelijke begrijpelijke taal\n- Kostenramingen direct herstel en op termijn"
+        },
+        {
+          "label": "Informatie Vooraf",
+          "tekst": "Alle aspecten die met het oog waarneembaar zijn, worden meegenomen. Onze inspecteur kan geen zaken demonstreren, verwijderen of beschadigen om eventueel niet-zichtbare gebreken te constateren. De levertermijn van het bouwkundig rapport gaat tot na uitlevering van de inspectie en na ontvangst van alle aangeleverde technische gegevens. Wij zijn daarin vriendelijk van de reactiesnelheid van de diebetreffende verkoopmakelaar."
+        }
+      ]
+    },
+    {
+      "intro": "Wij inspecteren onderstaande cruciale punten voor u:",
+      "kolommen": [
+        {
+          "label": "Bouwtechnisch",
+          "tekst": "- Fundering \\*\n- Draagconstructie\n- Vloer\n- Dakconstructie (Hoe is de algemene staat? Controle op houtworm en houtrot)\n- Schoorstenen (algemene staat visueel)\n- Trappen\n- Tegelwerk\n- Kozijnen\n- Metsel en voegwerk algemene staat en controle op scheurvorming\n- Schilderwerk (wat is de staat van het schilderwerk? Zijn er aandachtspunten en wat is de resterende levensduur van het schilderwerk?)\n- Hang en sluitwerk (wat is de staat van het hang- en sluitwerk en voldoet het aan de politie keurmerkkeuring wonen)\n- Keldermuren\n- Aanwezigheid asbesthoudende materialen op een visueel waarneembare manier, dan geen destructief onderzoek of monsterneming\n\n*De zaken aangemerkt met een \\* voeren wij alleen binnen de ARBO wet en regelgeving veilig praktisch uitvoerbaar.*"
+        },
+        {
+          "label": "Installatietechnisch",
+          "tekst": "- Verwarming (Is er centrale verwarming? En wat is de staat van de installatie? Hoe oud is de ketel en wat voor rendement ketel is het?)\n- Gasinstallatie (algehele staat zonder afpersen)\n- Elektrische installatie (algehele staat visueel)\n- Riolering (algehele staat visueel)\n- Sanitair (algehele staat)\n- Waterleidingen (algehele staat, zijn er nog loden leidingen?)\n- Keuken (algehele staat)"
+        }
+      ],
+      "tekst": "Deze aanloop/verkoopkeuring wordt ook wel verkoopkeuring genoemd en u laat dus bij een aan- en verkoop van een huis bij voorkeur een dergelijke keuring uitvoeren.\n\nHet rapport dat naar aanleiding van de keuring gemaakt wordt, voldoet aan alle eisen van de Nationale Hypotheek Garantie en is een erkend rapport.\n\nHet is altijd verstandig om een dergelijk rapport op te laten maken. Idealiter laat u een keuring verrichten voor u een eerste bod op een woning doet.",
+      "scheidingslijn": true
+    },
+    {
+      "tekst": "### Goed om vooraf te weten:\n\nAlle aspecten die het oog waarneembaar zijn, worden meegenomen. Onze inspecteur kan geen zaken demonstreren, verwijderen of beschadigen om eventueel niet-zichtbare gebreken te constateren.\n\nDe levertermijn van het bouwkundig rapport gaat na uitlevering van de inspectie en na ontvangst van alle aangeleverde technische gegevens. Wij zijn daarin vriendelijk van de reactiesnelheid van de diebetreffende verkoopmakelaar.\n\n### Arbeidsomstandigheden:\n\nVoor alle inspecties is een droge en minimaal vrije kruiphoogte van 0,50 meter vereist. De kruipruimte dient daarvoor zonder gevaar toegankelijk te zijn. Wanneer u als opdrachtgever niet aanwezig bent bij een inspectie, geldt dat een derde partij aanwezig is bij de inspectie, kan de aannemer in de directe omgeving van het kruipruimte worden geïnspecteerd.\n\nBalkons, goten en overstekken tot een maximale hoogte van ca. 2,6 meter of verdiepingshoogten worden geïnspecteerd, indien veilig bereikbaar van uit een ladder. Hoger gelegen elementen worden uitsluitend geïnspecteerd met de daarvoor beschikbare veilige middelen op opdrachtnemer.\n\nIndien tijdens inspectie blijkt dat bepaalde objecten of elementen voor moeilijk of gevaarlijk bereikbaar zijn, kunnen wij deze alleen maar visueel beoordelen.\n\n### Prijs van de aankoop/verkoopkeuring:\n\n- € 345,- (incl. BTW) objecten tot 500m³\n- € 395,- (incl. BTW) objecten 500 tot 1000m³\n\nObjecten zoals scholen, kerken, ziekenhuizen enzovoort; daar maken we een passende aanbieding voor aan de hand van het aantal m³."
+    }
+  ]
+}

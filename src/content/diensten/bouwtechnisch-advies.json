@@ -1,0 +1,49 @@
+{
+  "volgorde": 1,
+  "menuLabel": "Bouwtechnisch Advies",
+  "titel": "Bouwtechnisch Advies",
+  "subtitel": "Jeroen Klikkert",
+  "intro": "De Smidse BTA voert diverse bouwtechnische keuringen uit voor particulieren en bedrijven. Wij bieden het gemak en efficiëntie binnen het kopen, verkopen, verhuizen, verbouwen of onderhoud aan uw woning of bedrijfspand. De Smidse BTA is het aanspreekpunt voor alle diensten die worden aangeboden tijdens dit proces. Wij houden u op de hoogte van de voortgang van alle stappen die aan bod komen.",
+  "afbeelding": "/media/uploads/hero-placeholder.svg",
+  "secties": [
+    {
+      "kop": "Onze werkwijze",
+      "kolommen": [
+        {
+          "label": "Erkende Inspecteurs",
+          "tekst": "De Smidse BTA werkt uitsluitend met erkende bouwkundige inspecteurs (IWI integraal woning inspecteur). Deze inspecteurs zijn ingeschreven in het Sertum register en hebben vele jaren ervaring in de bouwwereld. Elk bouwkundig rapport wordt gevalideerd door middel van het 4 ogen principe. Dit alles om de kwaliteit voor uw te waarborgen."
+        },
+        {
+          "label": "Adviesbureau",
+          "tekst": "De Smidse BTA is een onafhankelijk adviesbureau in de vastgoedmarkt. Wij zijn een bedrijf dat innovatie en klantgerichtheid hoog in het vaandel heeft staan. Zo helpen wij particulieren, makelaars en hypotheekadviseurs met een keuringen en (energie)advies."
+        },
+        {
+          "label": "Onze Relaties",
+          "tekst": "In onze klantenring zitten ook projectontwikkelaars, architecten, bouwbedrijven, scholen, kerken, en (VVE) vereniging van eigenaars. Al deze organisaties en bedrijven maken gebruik van allerlei diensten waarbij maatwerk en advies een bepalende factor is."
+        }
+      ],
+      "scheidingslijn": true
+    },
+    {
+      "kop": "De branche erkende keurmerken van De Smidse BTA",
+      "kolommen": [
+        {
+          "label": "IWI Woning Inspecteurs",
+          "tekst": "Het uitvoeren van inspecties is belangrijk en goed inzicht te geven in de staat van onderhoud van een woning. De kwaliteit van de uitgevoerde inspectie is daartoe van groot belang. De gevolgen van een rapport kunnen immers groot zijn en elk bouwkundig rapport moet een inspecteur aantoonbaar competent zijn en blijven op alle voor de inspectie relevante gebieden."
+        },
+        {
+          "label": "Instituut Onderhoudsdiendingers",
+          "tekst": "Sertium is het enige onafhankelijke register voor erkende onderhoudstechnisch deskundigen in Nederland. Onze vakbekwaamheid staat onze kwaliteit in alles wat we doen. Onafhankelijkheid is belangrijk voor ons. De operationele taken van Sertium worden door een stichtingbureau uitgevoerd onder toezicht van het bestuur."
+        },
+        {
+          "label": "Certificerende Onderhoudsverzekeringen",
+          "tekst": "Sertium heeft duo het continu verbeteren van het niveau van vastgoedonderhoud als technisch beheer. De deskundigheid van de onderhoudsprofessionals die in het Sertium register als thuisinspecteur wordt gewaarborgd via de competentieaanwijzingen."
+        },
+        {
+          "label": "Licentie Keurmerk",
+          "tekst": "Actuele keurmerken en periodieke controle helpen om de kwaliteit en betrouwbaarheid van inspecties te waarborgen."
+        }
+      ]
+    }
+  ]
+}

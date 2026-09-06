@@ -1,0 +1,27 @@
+{
+  "volgorde": 3,
+  "menuLabel": "Opleveringskeuring",
+  "titel": "Opleveringskeuring",
+  "subtitel": "De woning van uw dromen en dan?",
+  "intro": "Wordt uw nieuwbouwhuis bijna opgeleverd? Of is de verbouwing van uw huidige woning bijna klaar? Met een opleveringskeuring laat u de nieuwbouw visueel keuren. Dan weet u zeker of de woning zich in een goede staat bevindt en of er geen gebreken zijn. Als alles in orde is neemt u bij de oplevering de sleutels zorgeloos in ontvangst.",
+  "afbeelding": "/media/uploads/hero-placeholder.svg",
+  "secties": [
+    {
+      "kop": "De Smidse BTA opleveringskeuring; hoe werkt het?",
+      "kolommen": [
+        {
+          "label": "De Inspectiedag",
+          "tekst": "Op de dag van de inspectie komt de bouwkundig inspecteur bij uw woning. De aannemer is daar soms ook bij aanwezig. Samen met hem en de inspecteur controleert u de gehele woning op mogelijke gebreken. De keuring vindt zowel aan de binnen als aan de buitenkant plaats. Aarzel niet om vragen te stellen. De aannemer zal uw vragen behandelen. Zo bekijken we per ruimte of alles in orde is. De bouwkundig inspecteur bekijkt alle onderdelen en installaties op functionaliteit, afwerking en markeringen. Na afloop tekent iedereen het proces-verbaal van de keuring en dan krijgt u het keuringsrapport opgestuurd."
+        },
+        {
+          "label": "Welke Onderdelen",
+          "tekst": "De inspecteur gaat zeer grondig te werk bij de opleveringskeuring en controleert alle onderdelen van het nieuwbouw- of aanbouwhuis.\n\n**Waar de inspecteur zowel op let:**\n\n- Rondom de woning kijkt de bouwkundige of paden en erfafscheiding in orde zijn.\n- Aan de buitenkant van de woning of de nieuwe aanbouw wordt gecontroleerd op het metselwerk, voegwerk, hemelsafvoeren, dakpannen, schilderwerk en ventilatie.\n- Binnen in de nieuwbouw controleert de inspecteur in iedere ruimte de afwerking, kozijnen, beglazing, elektro en schilderwerk.\n- De badkamer en toilet wordt gecontroleerd op leidingen, sanitair en tegelwerk.\n- In de keuken controleert de inspecteur o.a. de keukenopstelling, leidingen en het tegelwerk.\n- Ook wordt naar de installaties gekeken zoals, de ketel, warmwatervoorziening en de mechanische ventilatie."
+        },
+        {
+          "label": "Het Rapport",
+          "tekst": "Het rapport begint met de algemene gegevens van de woning zoals adres en type woning. Ook noteert de inspecteur de bevindingen in het rapport. Bij ieder aspect staat vermeld of er gebreken zijn en of de aannemer heeft gezegd die direct tijdens de keuring op te lossen.\n\n**Kosten opleveringskeuring:**\n\n- € 245,- inclusief btw."
+        }
+      ]
+    }
+  ]
+}

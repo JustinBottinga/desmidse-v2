@@ -1,0 +1,23 @@
+{
+  "volgorde": 7,
+  "menuLabel": "Bouwkundig Consult",
+  "titel": "Bouwkundig consult",
+  "subtitel": "wanneer controleren?",
+  "intro": "Wanneer u in uw woning of bedrijfspand met een specifiek probleem zit dan kunt u een bouwkundig consult laten uitvoeren. Dit consult is bedoeld om ter plaatse van een bouwkundige advies te krijgen over bijvoorbeeld een verzakking, vochtprobleem, scheurvorming of problemen bij een oplevering van een object. Maar ook bij veel andere bouw gerelateerde problemen kunnen wij u helpen zoeken naar een oplossing.",
+  "afbeelding": "/media/uploads/hero-placeholder.svg",
+  "secties": [
+    {
+      "kop": "Bouwkundig consult informatie",
+      "kolommen": [
+        {
+          "label": "Werkwijze",
+          "tekst": "Met moderne hulpmiddelen zijn wij in staat veel problemen op te sporen. Wel richten wij ons op een probleem per onderzoek. Heeft u meerdere bouw gerelateerde problemen dan is een bouwtechnische keuring een betere optie."
+        },
+        {
+          "label": "Kosten Bouwkundig Consult",
+          "tekst": "De kosten voor een bouwconsult zijn **€ 185,- inclusief** 21% BTW en exclusief rapport.\n\nVoor een eenvoudige rapportage van ons onderzoek zonder kostenbegroting is de meerprijs **€ 50,- inclusief** 21% BTW.\n\nVoor een uitgebreid rapport met kostenbegroting is de meerprijs **€ 150,- inclusief** 21% BTW."
+        }
+      ]
+    }
+  ]
+}

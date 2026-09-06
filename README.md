@@ -1,75 +1,56 @@
-# React + TypeScript + Vite
+# De Smidse BTA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + Vite site met Decap CMS. Alle paginateksten staan als content-bestanden in `src/content/` en zijn te bewerken via `/admin`.
 
-Currently, two official plugins are available:
+## Lokaal draaien
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+De CMS lokaal bewerken (schrijft direct naar je bestanden, zonder inloggen):
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npx decap-server
 ```
+
+Draai dat naast `npm run dev` en open http://localhost:5173/admin/.
+
+## Content
+
+| Wat | Waar |
+| --- | --- |
+| Home | `src/content/pages/home.json` |
+| Over ons | `src/content/pages/about.json` |
+| Contact | `src/content/pages/contact.json` |
+| Diensten-overzicht en blog-overzicht | `src/content/pages/diensten.json`, `blog.json` |
+| Diensten (1 bestand per dienst) | `src/content/diensten/*.json` |
+| Blogberichten | `src/content/blog/*.md` |
+| Geüploade afbeeldingen | `public/media/uploads/` |
+
+Het menu en de footer halen de diensten uit `src/content/diensten/`; het veld `volgorde` bepaalt de volgorde.
+
+## Inloggen op het CMS (Netlify)
+
+De CMS gebruikt Netlify Identity + Git Gateway, dus redacteuren loggen in met e-mail en wachtwoord
+in plaats van met een GitHub-account. Eenmalig instellen in de Netlify-site:
+
+1. **Integrations / Identity** → Identity inschakelen.
+2. **Identity → Registration** op *Invite only* zetten.
+3. **Identity → Services → Git Gateway** inschakelen.
+4. **Identity → Invite users** en het e-mailadres van de redacteur uitnodigen.
+
+De uitnodigingsmail linkt naar de site; na het instellen van een wachtwoord stuurt de site
+automatisch door naar `/admin/`.
+
+## Publiceren
+
+Het CMS staat in *editorial workflow*: opslaan zet een wijziging als concept op een aparte
+branch, er gebeurt dan nog niets op de live site. Onder de tab **Workflow** sleep je een
+wijziging naar *Klaar* en klik je op **Publiceren**; pas dan wordt het naar `main` gemerged
+en bouwt Netlify de site opnieuw.
+
+Zet in Netlify onder *Build & deploy → Continuous deployment* de **deploy previews uit**
+en **branch deploys op "None"**. Anders bouwt Netlify ook elk concept, en levert het
+uitstellen van publiceren geen deploys op.
