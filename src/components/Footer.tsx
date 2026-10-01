@@ -10,7 +10,9 @@ export default function Footer() {
           {/* Contact Information */}
           <div className="space-y-4">
             <div>
-              <h3 className="text-lg font-semibold mb-2">{contact.adres.kop}</h3>
+              <h3 className="text-lg font-semibold mb-2">
+                {contact.adres.kop}
+              </h3>
               <p>{contact.adres.bedrijfsnaam}</p>
               <p>{contact.adres.straat}</p>
               <p>
@@ -46,7 +48,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Onze Diensten</h3>
+            <h3 className="text-lg font-semibold mb-4">Onze diensten</h3>
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.href}>
@@ -71,10 +73,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  to="/over-ons"
+                  to="/over-mij"
                   className="hover:text-blue-400 transition-colors"
                 >
-                  Over ons
+                  Over mij
                 </Link>
               </li>
               <li>

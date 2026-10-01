@@ -6,7 +6,7 @@ export default function NotFound() {
       <div className="w-full max-w-xl text-center">
         <div className="mb-6 flex items-center justify-center gap-3 text-[11px] font-medium uppercase tracking-[0.28em] text-muted-foreground">
           <span className="h-px w-10 bg-border" />
-          <span>Desmidse BTA</span>
+          <span>De Smidse BTA</span>
           <span className="h-px w-10 bg-border" />
         </div>
 

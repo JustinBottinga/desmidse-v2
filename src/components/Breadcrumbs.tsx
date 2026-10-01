@@ -43,8 +43,8 @@ export default function Breadcrumbs() {
       { label: "Home", href: "/" },
     ];
     if (parts.length === 0) return list; // at home
-    if (parts[0] === "over-ons") {
-      list.push({ label: "Over ons", href: "/over-ons" });
+    if (parts[0] === "over-mij") {
+      list.push({ label: "Over mij", href: "/over-mij" });
       return list;
     }
     if (parts[0] === "contact") {

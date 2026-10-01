@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import App from "@/App";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
@@ -14,7 +14,8 @@ export const router = createBrowserRouter([
     errorElement: <NotFound />,
     children: [
       { index: true, element: <Home /> },
-      { path: "over-ons", element: <About /> },
+      { path: "over-mij", element: <About /> },
+      { path: "over-ons", element: <Navigate to="/over-mij" replace /> },
       // { path: "blog", element: <Blog /> },
       // { path: "blog/:slug", element: <BlogPost /> },
       { path: "admin", element: <AdminRedirect /> },

@@ -36,7 +36,7 @@ export default function Header() {
           <Link to="/" className="font-semibold tracking-tight text-foreground">
             <img
               src="/media/logo.png"
-              alt="Desmidse logo"
+              alt="De Smidse BTA logo"
               className="h-8 w-auto mr-3 object-contain"
             />
           </Link>
@@ -59,7 +59,7 @@ export default function Header() {
             </NavLink>
 
             <NavLink
-              to="/over-ons"
+              to="/over-mij"
               className={({ isActive }) =>
                 cn(
                   "text-sm font-medium transition-colors",
@@ -69,7 +69,7 @@ export default function Header() {
                 )
               }
             >
-              Over ons
+              Over mij
             </NavLink>
 
             {/* <NavLink
@@ -211,7 +211,7 @@ export default function Header() {
               Home
             </NavLink>
             <NavLink
-              to="/over-ons"
+              to="/over-mij"
               className={({ isActive }) =>
                 cn(
                   "block rounded-sm px-2 py-2 text-sm",
@@ -222,21 +222,7 @@ export default function Header() {
               }
               onClick={() => setMobileOpen(false)}
             >
-              Over ons
-            </NavLink>
-            <NavLink
-              to="/blog"
-              className={({ isActive }) =>
-                cn(
-                  "block rounded-sm px-2 py-2 text-sm",
-                  isActive
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground",
-                )
-              }
-              onClick={() => setMobileOpen(false)}
-            >
-              Blog
+              Over mij
             </NavLink>
             <div>
               <div className="px-2 py-2 text-sm font-medium text-muted-foreground">

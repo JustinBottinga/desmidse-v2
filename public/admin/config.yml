@@ -49,8 +49,16 @@ collections:
             widget: "object"
             fields:
               - { label: "Kop", name: "kop", widget: "string" }
-              - { label: "Telefoon (weergave)", name: "telefoonLabel", widget: "string" }
-              - { label: "Telefoonnummer (om te bellen)", name: "telefoonNummer", widget: "string" }
+              - {
+                  label: "Telefoon (weergave)",
+                  name: "telefoonLabel",
+                  widget: "string",
+                }
+              - {
+                  label: "Telefoonnummer (om te bellen)",
+                  name: "telefoonNummer",
+                  widget: "string",
+                }
               - { label: "Tekst", name: "tekst", widget: "text" }
               - { label: "Knoptekst", name: "knopLabel", widget: "string" }
           - label: "Keurmerken"
@@ -66,12 +74,12 @@ collections:
                   - { label: "Label", name: "label", widget: "string" }
                   - { label: "Tekst", name: "tekst", widget: "markdown" }
 
-  - name: "over-ons"
-    label: "Over ons"
-    label_singular: "Over ons"
+  - name: "over-mij"
+    label: "Over mij"
+    label_singular: "Over mij"
     files:
-      - name: "over-ons"
-        label: "Over ons"
+      - name: "over-mij"
+        label: "Over mij"
         file: "src/content/pages/about.json"
         fields:
           - label: "Header"
@@ -80,25 +88,56 @@ collections:
             fields:
               - { label: "Afbeelding", name: "afbeelding", widget: "image" }
               - { label: "Titel", name: "titel", widget: "string" }
-              - { label: "Subtitel", name: "subtitel", widget: "string", required: false }
-              - { label: "Introtekst", name: "intro", widget: "text", required: false }
+              - {
+                  label: "Subtitel",
+                  name: "subtitel",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Introtekst",
+                  name: "intro",
+                  widget: "text",
+                  required: false,
+                }
           - label: "Secties"
             name: "secties"
             widget: "list"
             summary: "{{fields.kop}}"
             fields:
               - { label: "Kop", name: "kop", widget: "string", required: false }
-              - { label: "Introzin boven de kolommen", name: "intro", widget: "string", required: false }
+              - {
+                  label: "Introzin boven de kolommen",
+                  name: "intro",
+                  widget: "string",
+                  required: false,
+                }
               - label: "Kolommen"
                 name: "kolommen"
                 widget: "list"
                 required: false
                 summary: "{{fields.label}}"
                 fields:
-                  - { label: "Label", name: "label", widget: "string", required: false }
+                  - {
+                      label: "Label",
+                      name: "label",
+                      widget: "string",
+                      required: false,
+                    }
                   - { label: "Tekst", name: "tekst", widget: "markdown" }
-              - { label: "Tekst onder de kolommen", name: "tekst", widget: "markdown", required: false }
-              - { label: "Scheidingslijn eronder", name: "scheidingslijn", widget: "boolean", required: false, default: false }
+              - {
+                  label: "Tekst onder de kolommen",
+                  name: "tekst",
+                  widget: "markdown",
+                  required: false,
+                }
+              - {
+                  label: "Scheidingslijn eronder",
+                  name: "scheidingslijn",
+                  widget: "boolean",
+                  required: false,
+                  default: false,
+                }
 
   - name: "contact"
     label: "Contact"
@@ -123,8 +162,16 @@ collections:
             widget: "object"
             fields:
               - { label: "Kop", name: "kop", widget: "string" }
-              - { label: "Bedrijfsnaam", name: "bedrijfsnaam", widget: "string" }
-              - { label: "Straat en huisnummer", name: "straat", widget: "string" }
+              - {
+                  label: "Bedrijfsnaam",
+                  name: "bedrijfsnaam",
+                  widget: "string",
+                }
+              - {
+                  label: "Straat en huisnummer",
+                  name: "straat",
+                  widget: "string",
+                }
               - { label: "Postcode", name: "postcode", widget: "string" }
               - { label: "Plaats", name: "plaats", widget: "string" }
           - label: "Gegevens"
@@ -132,15 +179,33 @@ collections:
             widget: "object"
             fields:
               - { label: "E-mailadres", name: "email", widget: "string" }
-              - { label: "Telefoon (weergave)", name: "telefoon", widget: "string" }
-              - { label: "Telefoonnummer (om te bellen)", name: "telefoonNummer", widget: "string" }
+              - {
+                  label: "Telefoon (weergave)",
+                  name: "telefoon",
+                  widget: "string",
+                }
+              - {
+                  label: "Telefoonnummer (om te bellen)",
+                  name: "telefoonNummer",
+                  widget: "string",
+                }
               - { label: "KvK-nummer", name: "kvk", widget: "string" }
           - label: "Downloadlink"
             name: "document"
             widget: "object"
             fields:
-              - { label: "Linktekst", name: "label", widget: "string", required: false }
-              - { label: "Bestand", name: "bestand", widget: "file", required: false }
+              - {
+                  label: "Linktekst",
+                  name: "label",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Bestand",
+                  name: "bestand",
+                  widget: "file",
+                  required: false,
+                }
 
   - name: "diensten"
     label: "Diensten"
@@ -153,12 +218,33 @@ collections:
     summary: "{{menuLabel}}"
     sortable_fields: ["volgorde", "titel"]
     fields:
-      - { label: "Volgorde in het menu", name: "volgorde", widget: "number", value_type: "int", min: 1 }
-      - { label: "Menulabel", name: "menuLabel", widget: "string", hint: "Zoals de dienst in het menu en de footer verschijnt." }
+      - {
+          label: "Volgorde in het menu",
+          name: "volgorde",
+          widget: "number",
+          value_type: "int",
+          min: 1,
+        }
+      - {
+          label: "Menulabel",
+          name: "menuLabel",
+          widget: "string",
+          hint: "Zoals de dienst in het menu en de footer verschijnt.",
+        }
       - { label: "Titel", name: "titel", widget: "string" }
-      - { label: "Subtitel", name: "subtitel", widget: "string", required: false }
+      - {
+          label: "Subtitel",
+          name: "subtitel",
+          widget: "string",
+          required: false,
+        }
       - { label: "Introtekst", name: "intro", widget: "text", required: false }
-      - { label: "Header-afbeelding", name: "afbeelding", widget: "image", required: false }
+      - {
+          label: "Header-afbeelding",
+          name: "afbeelding",
+          widget: "image",
+          required: false,
+        }
       - label: "Secties"
         name: "secties"
         widget: "list"
@@ -166,37 +252,38 @@ collections:
         summary: "{{fields.kop}}"
         fields:
           - { label: "Kop", name: "kop", widget: "string", required: false }
-          - { label: "Introzin boven de kolommen", name: "intro", widget: "string", required: false }
+          - {
+              label: "Introzin boven de kolommen",
+              name: "intro",
+              widget: "string",
+              required: false,
+            }
           - label: "Kolommen"
             name: "kolommen"
             widget: "list"
             required: false
             summary: "{{fields.label}}"
             fields:
-              - { label: "Label", name: "label", widget: "string", required: false }
+              - {
+                  label: "Label",
+                  name: "label",
+                  widget: "string",
+                  required: false,
+                }
               - { label: "Tekst", name: "tekst", widget: "markdown" }
-          - { label: "Tekst onder de kolommen", name: "tekst", widget: "markdown", required: false }
-          - { label: "Scheidingslijn eronder", name: "scheidingslijn", widget: "boolean", required: false, default: false }
-
-  - name: "blog"
-    label: "Blog"
-    label_singular: "Blogbericht"
-    folder: "src/content/blog"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    extension: "md"
-    format: "frontmatter"
-    summary: "{{title}}"
-    fields:
-      - { label: "Titel", name: "title", widget: "string" }
-      - { label: "Intro", name: "excerpt", widget: "text", required: false }
-      - { label: "Afbeelding", name: "image", widget: "image", required: false }
-      - label: "Publicatiedatum"
-        name: "date"
-        widget: "datetime"
-        date_format: "YYYY-MM-DD"
-        time_format: false
-      - { label: "Body", name: "body", widget: "markdown" }
+          - {
+              label: "Tekst onder de kolommen",
+              name: "tekst",
+              widget: "markdown",
+              required: false,
+            }
+          - {
+              label: "Scheidingslijn eronder",
+              name: "scheidingslijn",
+              widget: "boolean",
+              required: false,
+              default: false,
+            }
 
   - name: "overige-paginas"
     label: "Overige pagina's"
@@ -208,12 +295,3 @@ collections:
         fields:
           - { label: "Titel", name: "titel", widget: "string" }
           - { label: "Introtekst", name: "intro", widget: "text" }
-      - name: "blog-overzicht"
-        label: "Blog - overzichtspagina"
-        file: "src/content/pages/blog.json"
-        fields:
-          - { label: "Titel", name: "titel", widget: "string" }
-          - { label: "Subtitel", name: "subtitel", widget: "string" }
-          - { label: "Introtekst", name: "intro", widget: "text" }
-          - { label: "Standaard header-afbeelding", name: "afbeelding", widget: "image" }
-          - { label: "Tekst als er geen berichten zijn", name: "leegTekst", widget: "string" }
