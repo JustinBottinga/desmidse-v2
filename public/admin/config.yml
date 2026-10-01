@@ -190,23 +190,6 @@ collections:
                   widget: "string",
                 }
               - { label: "KvK-nummer", name: "kvk", widget: "string" }
-          - label: "Downloadlink"
-            name: "document"
-            widget: "object"
-            fields:
-              - {
-                  label: "Linktekst",
-                  name: "label",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Bestand",
-                  name: "bestand",
-                  widget: "file",
-                  required: false,
-                }
-
   - name: "diensten"
     label: "Diensten"
     label_singular: "Dienst"
