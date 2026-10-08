@@ -11,7 +11,7 @@ export default function AdminRedirect() {
       <p className="text-muted-foreground">
         Je wordt doorgestuurd naar de Decap CMS editor.
       </p>
-      <a className="text-primary underline" href="/admin/">
+      <a className="text-link underline" href="/admin/">
         Open de editor handmatig
       </a>
     </div>

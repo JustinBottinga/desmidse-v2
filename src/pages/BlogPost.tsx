@@ -21,7 +21,7 @@ export default function BlogPost() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center space-y-4">
         <h1 className="text-2xl font-semibold">Bericht niet gevonden</h1>
         <p className="text-muted-foreground">Dit blogbericht bestaat niet.</p>
-        <Link to="/blog" className="text-primary underline">
+        <Link to="/blog" className="text-link underline">
           Terug naar blog
         </Link>
       </div>
@@ -45,7 +45,7 @@ export default function BlogPost() {
           <div>
             <Link
               to="/blog"
-              className="text-sm font-medium text-blue-700 hover:underline"
+              className="text-base font-semibold text-link underline decoration-link/40 underline-offset-4 hover:decoration-link"
             >
               Terug naar overzicht
             </Link>

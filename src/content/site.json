@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "siteUrl": "https://www.desmidsebta.nl",
+    "siteNaam": "De Smidse BTA",
+    "standaardBeschrijving": "Bouwtechnisch adviesbureau en woninginspecties in Daarlerveen: aankoopkeuring, opleveringskeuring, nulmeting en meer.",
+    "standaardAfbeelding": "/media/uploads/huisjes.jpg"
+  },
+  "navigatie": {
+    "logoStijl": "klein-tekst",
+    "logoKlein": "/media/logo.png",
+    "logoGroot": "",
+    "logoTekst": "De Smidse BTA",
+    "items": [
+      {
+        "label": "Home",
+        "link": "/"
+      },
+      {
+        "label": "Over mij",
+        "link": "/over-mij"
+      },
+      {
+        "label": "Onze diensten",
+        "link": "/diensten",
+        "dropdown": true
+      },
+      {
+        "label": "Contact",
+        "link": "/contact"
+      }
+    ],
+    "belKnopTonen": true
+  },
+  "footer": {
+    "toonDiensten": true,
+    "dienstenKop": "Onze diensten",
+    "paginaKop": "Pagina's",
+    "paginaLinks": [
+      {
+        "label": "Home",
+        "link": "/"
+      },
+      {
+        "label": "Over mij",
+        "link": "/over-mij"
+      },
+      {
+        "label": "Contact",
+        "link": "/contact"
+      }
+    ],
+    "onderregel": ""
+  }
+}

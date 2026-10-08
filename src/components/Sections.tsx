@@ -1,13 +1,7 @@
 import Markdown from "@/components/Markdown";
+import ColumnGrid from "@/components/ColumnGrid";
 import { cn } from "@/lib/utils";
 import type { ContentSection } from "@/lib/content";
-
-const gridForColumns: Record<number, string> = {
-  1: "",
-  2: "md:grid-cols-2",
-  3: "md:grid-cols-3",
-  4: "sm:grid-cols-2 lg:grid-cols-4",
-};
 
 export default function Sections({ secties }: { secties?: ContentSection[] }) {
   if (!secties?.length) return null;
@@ -21,41 +15,36 @@ export default function Sections({ secties }: { secties?: ContentSection[] }) {
           <div key={index} className="space-y-16">
             <section>
               {sectie.kop ? (
-                <h2 className="text-2xl md:text-3xl font-bold text-center my-10">
+                <h2 className="my-10 text-3xl font-bold leading-tight md:text-4xl">
                   {sectie.kop}
                 </h2>
               ) : null}
 
               {sectie.intro ? (
-                <p className="text-sm text-muted-foreground mb-8">
+                <p className="mb-8 text-lg text-muted-foreground md:text-xl">
                   {sectie.intro}
                 </p>
               ) : null}
 
               {kolommen.length ? (
-                <div
-                  className={cn(
-                    "grid grid-cols-1 gap-8",
-                    gridForColumns[Math.min(kolommen.length, 4)]
-                  )}
-                >
+                <ColumnGrid>
                   {kolommen.map((kolom, kolomIndex) => (
                     <div key={kolomIndex}>
                       {kolom.label ? (
-                        <h3 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-3">
+                        <h3 className="mb-3 font-mono text-xs font-medium uppercase tracking-[0.14em] text-muted-foreground">
                           {kolom.label}
                         </h3>
                       ) : null}
                       <Markdown>{kolom.tekst}</Markdown>
                     </div>
                   ))}
-                </div>
+                </ColumnGrid>
               ) : null}
 
               {sectie.tekst ? (
                 <div
                   className={cn(
-                    kolommen.length ? "mt-8" : "max-w-3xl mx-auto"
+                    kolommen.length ? "mt-8" : "max-w-3xl"
                   )}
                 >
                   <Markdown>{sectie.tekst}</Markdown>
@@ -63,7 +52,7 @@ export default function Sections({ secties }: { secties?: ContentSection[] }) {
               ) : null}
             </section>
 
-            {sectie.scheidingslijn ? <hr /> : null}
+            {sectie.scheidingslijn ? <hr className="border-border" /> : null}
           </div>
         );
       })}

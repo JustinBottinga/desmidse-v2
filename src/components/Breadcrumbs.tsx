@@ -74,8 +74,8 @@ export default function Breadcrumbs() {
   // Render
   if (hide) return null;
   return (
-    <nav aria-label="Breadcrumb" className="py-2 text-sm italic">
-      <ol className="flex items-center gap-1 text-muted-foreground">
+    <nav aria-label="Breadcrumb" className="mx-auto max-w-7xl px-4 py-1 text-sm sm:px-6 lg:px-8">
+      <ol className="flex flex-wrap items-center gap-x-1 text-muted-foreground">
         {crumbs.map((c, idx) => {
           const isLast = idx === crumbs.length - 1;
           const isDienstenDropdown =
@@ -91,27 +91,27 @@ export default function Breadcrumbs() {
               {!isLast && (
                 <NavLink
                   to={c.href}
-                  className="hover:text-foreground hover:underline"
+                  className="inline-flex min-h-11 items-center hover:text-foreground hover:underline"
                 >
                   {c.label}
                 </NavLink>
               )}
               {isLast && !isDienstenDropdown && (
-                <span className="text-foreground">{c.label}</span>
+                <span className="font-semibold text-foreground">{c.label}</span>
               )}
               {isDienstenDropdown && (
                 <div className="relative" ref={menuRef}>
                   <button
                     type="button"
                     className={cn(
-                      "inline-flex items-center rounded-sm px-2 py-1 hover:bg-accent hover:text-accent-foreground",
+                      "inline-flex min-h-11 items-center rounded-lg px-2 hover:bg-accent hover:text-accent-foreground",
                       open ? "bg-accent text-accent-foreground" : "",
                     )}
                     aria-haspopup="menu"
                     aria-expanded={open}
                     onClick={() => setOpen((v) => !v)}
                   >
-                    <span className="text-foreground">{c.label}</span>
+                    <span className="font-semibold text-foreground">{c.label}</span>
                     <svg
                       className={cn(
                         "ml-1 h-3 w-3",
@@ -131,7 +131,7 @@ export default function Breadcrumbs() {
                   {open && (
                     <div
                       role="menu"
-                      className="absolute left-0 top-full mt-2 min-w-56 z-50 rounded-md border bg-popover text-popover-foreground shadow-md"
+                      className="absolute left-0 top-full mt-2 min-w-56 z-50 rounded-xl border border-border bg-popover text-popover-foreground shadow-sm"
                     >
                       <ul className="p-1 max-h-80 overflow-auto">
                         {services.map((s) => (
@@ -140,7 +140,7 @@ export default function Breadcrumbs() {
                               to={s.href}
                               className={({ isActive }) =>
                                 cn(
-                                  "block rounded-sm px-3 py-2 text-sm transition-colors",
+                                  "flex min-h-11 items-center rounded-lg px-3 text-base transition-colors",
                                   isActive
                                     ? "bg-accent text-accent-foreground"
                                     : "text-muted-foreground hover:bg-accent hover:text-accent-foreground",

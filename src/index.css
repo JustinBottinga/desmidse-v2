@@ -1,67 +1,39 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Base color tokens using OKLCH as recommended by shadcn for Tailwind v4 */
+/* Huisstijl: zie DESIGN.md (staal, krijt, vonk) */
 :root {
-	--background: oklch(1 0 0);
-	--foreground: oklch(0.14 0 0);
+	--background: #f2f1ec;
+	--foreground: #14202b;
 
-	--card: oklch(1 0 0);
-	--card-foreground: oklch(0.14 0 0);
+	--card: #ffffff;
+	--card-foreground: #14202b;
+	--popover: #ffffff;
+	--popover-foreground: #14202b;
 
-	--popover: oklch(1 0 0);
-	--popover-foreground: oklch(0.14 0 0);
+	--primary: #f27a45;
+	--primary-foreground: #14202b;
 
-	--primary: oklch(0.56 0.09 262);
-	--primary-foreground: oklch(0.98 0.01 262);
+	--secondary: #14202b;
+	--secondary-foreground: #f2f1ec;
 
-	--secondary: oklch(0.96 0.01 262);
-	--secondary-foreground: oklch(0.37 0.03 262);
+	--muted: #e9e7df;
+	--muted-foreground: #3b4856;
+	--accent: #e9e7df;
+	--accent-foreground: #14202b;
 
-	--muted: oklch(0.96 0.01 262);
-	--muted-foreground: oklch(0.55 0.03 262);
+	--destructive: #b42318;
+	--destructive-foreground: #ffffff;
 
-	--accent: oklch(0.96 0.01 262);
-	--accent-foreground: oklch(0.37 0.03 262);
+	--border: #d9d7ce;
+	--input: #d9d7ce;
+	--ring: #14202b;
 
-	--destructive: oklch(0.59 0.11 25);
-	--destructive-foreground: oklch(0.98 0.02 25);
-
-	--border: oklch(0.89 0.02 262);
-	--input: oklch(0.89 0.02 262);
-	--ring: oklch(0.64 0.07 262);
+	--link: #b8400f;
+	--ink-line: #34495c;
+	--ink-text: #d5dce3;
 
 	--radius: 0.5rem;
-}
-
-.dark {
-	--background: oklch(0.14 0 0);
-	--foreground: oklch(0.98 0.02 262);
-
-	--card: oklch(0.21 0.01 262);
-	--card-foreground: oklch(0.98 0.02 262);
-
-	--popover: oklch(0.21 0.01 262);
-	--popover-foreground: oklch(0.98 0.02 262);
-
-	--primary: oklch(0.75 0.11 262);
-	--primary-foreground: oklch(0.16 0.03 262);
-
-	--secondary: oklch(0.29 0.02 262);
-	--secondary-foreground: oklch(0.98 0.02 262);
-
-	--muted: oklch(0.29 0.02 262);
-	--muted-foreground: oklch(0.76 0.03 262);
-
-	--accent: oklch(0.29 0.02 262);
-	--accent-foreground: oklch(0.98 0.02 262);
-
-	--destructive: oklch(0.59 0.11 25);
-	--destructive-foreground: oklch(0.98 0.02 25);
-
-	--border: oklch(0.32 0.02 262);
-	--input: oklch(0.32 0.02 262);
-	--ring: oklch(0.75 0.11 262);
 }
 
 /* Map CSS variables to Tailwind theme colors using Tailwind v4 @theme inline */
@@ -85,6 +57,13 @@
 	--color-border: var(--border);
 	--color-input: var(--input);
 	--color-ring: var(--ring);
+	--color-link: var(--link);
+	--color-ink-line: var(--ink-line);
+	--color-ink-text: var(--ink-text);
+
+	--font-sans: "Hanken Grotesk", system-ui, sans-serif;
+	--font-display: "Bricolage Grotesque", "Hanken Grotesk", system-ui, sans-serif;
+	--font-mono: "IBM Plex Mono", ui-monospace, monospace;
 
 	--radius: var(--radius);
 }
@@ -95,12 +74,28 @@ body {
 	color: var(--foreground);
 }
 
-* {
-	@apply border-border;
+body {
+	@apply bg-background text-foreground font-sans;
 }
 
-body {
-	@apply bg-background text-foreground;
+@layer base {
+	* {
+		@apply border-border;
+	}
+
+	/* In @layer base zodat utilities als font-mono of outline-none ze kunnen overschrijven */
+	h1,
+	h2,
+	h3 {
+		font-family: var(--font-display);
+		letter-spacing: -0.02em;
+	}
+
+	a:focus-visible,
+	button:focus-visible {
+		outline: 3px solid var(--ring);
+		outline-offset: 3px;
+	}
 }
 
 /* Helpers */

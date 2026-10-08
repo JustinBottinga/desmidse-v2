@@ -93,6 +93,9 @@ export type Dienst = {
   subtitel?: string;
   intro?: string;
   afbeelding?: string;
+  metaTitel?: string;
+  metaBeschrijving?: string;
+  metaAfbeelding?: string;
   secties?: ContentSection[];
 };
 

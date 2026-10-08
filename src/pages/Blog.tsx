@@ -39,7 +39,7 @@ export default function Blog() {
               return (
                 <article
                   key={post.slug}
-                  className="rounded-2xl border bg-white p-6"
+                  className="rounded-xl border border-border bg-card p-6 shadow-sm"
                 >
                   <p className="text-xs uppercase tracking-widest text-muted-foreground">
                     {published || "Onbekende datum"}
@@ -57,7 +57,7 @@ export default function Blog() {
                   <div className="mt-4">
                     <Link
                       to={`/blog/${post.slug}`}
-                      className="text-sm font-medium text-blue-700 hover:underline"
+                      className="text-base font-semibold text-link underline decoration-link/40 underline-offset-4 hover:decoration-link"
                     >
                       Lees bericht
                     </Link>
