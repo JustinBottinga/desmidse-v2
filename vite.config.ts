@@ -6,6 +6,14 @@ import { mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join, resolve } from 'node:path'
 import { buildMeta, injectMeta, type PageMetaSource, type SiteMeta } from './src/lib/meta'
 
+// Netlify zet CONTEXT (production | deploy-preview | branch-deploy | dev) en
+// DEPLOY_PRIME_URL (het adres van de deploy). Alles behalve production is een
+// preview: die wijst naar zichzelf en wordt niet geïndexeerd.
+const previewUrl =
+  process.env.CONTEXT && process.env.CONTEXT !== 'production'
+    ? process.env.DEPLOY_PRIME_URL
+    : undefined
+
 const readJson = <T>(path: string) =>
   JSON.parse(readFileSync(path, 'utf8')) as T
 
@@ -29,6 +37,7 @@ function prerenderDienstenMeta(): Plugin {
       const site = readJson<{ metadata: SiteMeta }>(
         join(root, 'src/content/site.json'),
       ).metadata
+      if (previewUrl) site.siteUrl = previewUrl
 
       const pages: Array<{ path: string; source: PageMetaSource }> = [
         {
@@ -66,7 +75,24 @@ export default defineConfig({
     }),
     tailwindcss(),
     prerenderDienstenMeta(),
+    {
+      name: 'noindex-previews',
+      apply: 'build',
+      transformIndexHtml: () =>
+        previewUrl
+          ? [
+              {
+                tag: 'meta',
+                attrs: { name: 'robots', content: 'noindex' },
+                injectTo: 'head',
+              },
+            ]
+          : [],
+    },
   ],
+  define: {
+    'import.meta.env.VITE_SITE_URL_OVERRIDE': JSON.stringify(previewUrl ?? ''),
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),

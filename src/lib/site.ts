@@ -32,7 +32,17 @@ export type SiteSettings = {
   };
 };
 
-export const site = siteJson as SiteSettings;
+const base = siteJson as SiteSettings;
+
+// Op Netlify previews en branch deploys wijzen canonical/og:url naar die
+// deploy zelf in plaats van naar de live site (zie vite.config.ts).
+export const site: SiteSettings = {
+  ...base,
+  metadata: {
+    ...base.metadata,
+    siteUrl: import.meta.env.VITE_SITE_URL_OVERRIDE || base.metadata.siteUrl,
+  },
+};
 
 export function isExternalLink(link: string) {
   return /^(https?:|mailto:|tel:)/i.test(link);
