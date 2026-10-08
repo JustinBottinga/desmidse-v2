@@ -27,13 +27,24 @@ function remove(attr: string, key: string) {
 
 /** Zet title, description, canonical en Open Graph-tags voor de huidige pagina. */
 export function usePageMeta(page: PageMetaSource, path: string) {
-  const { titel, intro, afbeelding, metaTitel, metaBeschrijving, metaAfbeelding } =
-    page;
+  const { titel, intro, afbeelding, metadata } = page;
+  const metaTitel = metadata?.titel;
+  const metaBeschrijving = metadata?.beschrijving;
+  const metaAfbeelding = metadata?.afbeelding;
 
   useEffect(() => {
     const meta = buildMeta(
       site.metadata,
-      { titel, intro, afbeelding, metaTitel, metaBeschrijving, metaAfbeelding },
+      {
+        titel,
+        intro,
+        afbeelding,
+        metadata: {
+          titel: metaTitel,
+          beschrijving: metaBeschrijving,
+          afbeelding: metaAfbeelding,
+        },
+      },
       path,
     );
     document.title = meta.title;

@@ -93,10 +93,8 @@ export type Dienst = {
   subtitel?: string;
   intro?: string;
   afbeelding?: string;
-  metaTitel?: string;
-  metaBeschrijving?: string;
-  metaAfbeelding?: string;
   secties?: ContentSection[];
+  metadata?: { titel?: string; beschrijving?: string; afbeelding?: string };
 };
 
 const dienstFiles = import.meta.glob<Omit<Dienst, "slug">>(

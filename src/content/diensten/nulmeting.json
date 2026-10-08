@@ -5,8 +5,6 @@
   "subtitel": "Jeroen Klikkert",
   "intro": "Wordt er binnenkort met bouwwerkzaamheden gestart in de directe omgeving van uw woning of bedrijfspand? Denk hierbij aan een grote verbouwing bij de buren of heiwerkzaamheden, graafwerkzaamheden, baggerwerken en dergelijke.",
   "afbeelding": "/media/uploads/hero-placeholder.svg",
-  "metaTitel": "Nulmeting bij bouwwerkzaamheden in de buurt | De Smidse BTA",
-  "metaBeschrijving": "Een nulmeting legt de staat van uw woning vast vóór heien, graven of verbouwen in de buurt. Onafhankelijk rapport als bewijs bij schade.",
   "secties": [
     {
       "kop": "Hoe gaat de Nulmeting te werk",
@@ -25,5 +23,9 @@
         }
       ]
     }
-  ]
+  ],
+  "metadata": {
+    "titel": "Nulmeting bij bouwwerkzaamheden in de buurt | De Smidse BTA",
+    "beschrijving": "Een nulmeting legt de staat van uw woning vast vóór heien, graven of verbouwen in de buurt. Onafhankelijk rapport als bewijs bij schade."
+  }
 }

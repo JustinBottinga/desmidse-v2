@@ -242,29 +242,6 @@ collections:
           widget: "image",
           required: false,
         }
-      - {
-          label: "Meta-titel",
-          name: "metaTitel",
-          widget: "string",
-          required: false,
-          hint: "De titel in Google en in het tabblad. Ideaal tot 60 tekens. Leeg = Titel + sitenaam.",
-          pattern: ["^.{0,70}$", "Maximaal 70 tekens"],
-        }
-      - {
-          label: "Meta-beschrijving",
-          name: "metaBeschrijving",
-          widget: "text",
-          required: false,
-          hint: "De tekst onder de titel in Google. Ideaal 120 tot 155 tekens. Leeg = de introtekst.",
-          pattern: ["^(.|\n){0,170}$", "Maximaal 170 tekens"],
-        }
-      - {
-          label: "Meta-afbeelding",
-          name: "metaAfbeelding",
-          widget: "image",
-          required: false,
-          hint: "Afbeelding bij delen via WhatsApp, LinkedIn e.d. Leeg = header-afbeelding of standaardafbeelding.",
-        }
       - label: "Secties"
         name: "secties"
         widget: "list"
@@ -305,6 +282,32 @@ collections:
               default: false,
             }
 
+      - label: "Metadata (zoekmachines en deelknoppen)"
+        name: "metadata"
+        widget: "object"
+        collapsed: true
+        required: false
+        hint: "Optioneel. Leeg laten = titel en introtekst van de pagina worden gebruikt."
+        fields:
+          - label: "Meta-titel"
+            name: "titel"
+            widget: "string"
+            required: false
+            hint: "De titel in Google en in het tabblad. Ideaal tot 60 tekens. Leeg = Titel + sitenaam."
+            pattern: ["^.{0,70}$", "Maximaal 70 tekens"]
+          - label: "Meta-beschrijving"
+            name: "beschrijving"
+            widget: "text"
+            required: false
+            hint: "De tekst onder de titel in Google. Ideaal 120 tot 155 tekens. Leeg = de introtekst."
+            pattern: ["^(.|
+){0,170}$", "Maximaal 170 tekens"]
+          - label: "Meta-afbeelding"
+            name: "afbeelding"
+            widget: "image"
+            required: false
+            hint: "Afbeelding bij delen via WhatsApp, LinkedIn e.d. Leeg = header-afbeelding of standaardafbeelding."
+
   - name: "overige-paginas"
     label: "Overige pagina's"
     label_singular: "Pagina"
@@ -315,28 +318,31 @@ collections:
         fields:
           - { label: "Titel", name: "titel", widget: "string" }
           - { label: "Introtekst", name: "intro", widget: "text" }
-          - {
-              label: "Meta-titel",
-              name: "metaTitel",
-              widget: "string",
-              required: false,
-              hint: "De titel in Google en in het tabblad. Ideaal tot 60 tekens.",
-              pattern: ["^.{0,70}$", "Maximaal 70 tekens"],
-            }
-          - {
-              label: "Meta-beschrijving",
-              name: "metaBeschrijving",
-              widget: "text",
-              required: false,
-              hint: "De tekst onder de titel in Google. Ideaal 120 tot 155 tekens.",
-              pattern: ["^(.|\n){0,170}$", "Maximaal 170 tekens"],
-            }
-          - {
-              label: "Meta-afbeelding",
-              name: "metaAfbeelding",
-              widget: "image",
-              required: false,
-            }
+          - label: "Metadata (zoekmachines en deelknoppen)"
+            name: "metadata"
+            widget: "object"
+            collapsed: true
+            required: false
+            hint: "Optioneel. Leeg laten = titel en introtekst van de pagina worden gebruikt."
+            fields:
+              - label: "Meta-titel"
+                name: "titel"
+                widget: "string"
+                required: false
+                hint: "De titel in Google en in het tabblad. Ideaal tot 60 tekens. Leeg = Titel + sitenaam."
+                pattern: ["^.{0,70}$", "Maximaal 70 tekens"]
+              - label: "Meta-beschrijving"
+                name: "beschrijving"
+                widget: "text"
+                required: false
+                hint: "De tekst onder de titel in Google. Ideaal 120 tot 155 tekens. Leeg = de introtekst."
+                pattern: ["^(.|
+){0,170}$", "Maximaal 170 tekens"]
+              - label: "Meta-afbeelding"
+                name: "afbeelding"
+                widget: "image"
+                required: false
+                hint: "Afbeelding bij delen via WhatsApp, LinkedIn e.d. Leeg = header-afbeelding of standaardafbeelding."
 
   - name: "instellingen"
     label: "Navigatie en footer"
@@ -446,6 +452,7 @@ collections:
           - label: "Standaard metadata"
             name: "metadata"
             widget: "object"
+            collapsed: true
             fields:
               - {
                   label: "Website-adres",

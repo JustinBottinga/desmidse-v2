@@ -12,9 +12,12 @@ export type PageMetaSource = {
   titel?: string;
   intro?: string;
   afbeelding?: string;
-  metaTitel?: string;
-  metaBeschrijving?: string;
-  metaAfbeelding?: string;
+  /** Groep "Metadata" uit het CMS. */
+  metadata?: {
+    titel?: string;
+    beschrijving?: string;
+    afbeelding?: string;
+  };
 };
 
 export type PageMeta = {
@@ -52,15 +55,15 @@ export function buildMeta(
     page.afbeelding && !page.afbeelding.endsWith(PLACEHOLDER)
       ? page.afbeelding
       : undefined;
-  const image = page.metaAfbeelding || photo || site.standaardAfbeelding;
+  const image = page.metadata?.afbeelding || photo || site.standaardAfbeelding;
   const normalizedPath = path.length > 1 ? path.replace(/\/+$/, "") : path;
 
   return {
     title:
-      page.metaTitel?.trim() ||
+      page.metadata?.titel?.trim() ||
       (page.titel ? `${page.titel} | ${site.siteNaam}` : site.siteNaam),
     description:
-      page.metaBeschrijving?.trim() ||
+      page.metadata?.beschrijving?.trim() ||
       (page.intro ? truncate(page.intro) : site.standaardBeschrijving),
     image: image ? absoluteUrl(site, image) : undefined,
     url: absoluteUrl(site, normalizedPath),

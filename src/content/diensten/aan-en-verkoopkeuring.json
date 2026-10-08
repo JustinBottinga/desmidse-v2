@@ -5,8 +5,6 @@
   "subtitel": "De mening van uw dromen in dan?",
   "intro": "Als u de woning van uw dromen gevonden heeft dan kan het afsluiten van een lening (en beslissing van een verbouwing aan uw woning) een bouwkundige keuring vereist zijn. De kredietverstrekker wil ook graag de huidige staat van het huis en eventuele verbouwingskosten weten... u natuurlijk ook! Onze inspecteurs helpen u hier graag mee.",
   "afbeelding": "/media/uploads/hero-placeholder.svg",
-  "metaTitel": "Aankoopkeuring en verkoopkeuring woning | De Smidse BTA",
-  "metaBeschrijving": "Weet wat u koopt voordat u tekent. Een bouwkundige aan- of verkoopkeuring door een erkend woninginspecteur, met rapport voor uw hypotheek en NHG.",
   "secties": [
     {
       "kop": "Wij helpen u met:",
@@ -43,5 +41,9 @@
     {
       "tekst": "### Goed om vooraf te weten:\n\nAlle aspecten die het oog waarneembaar zijn, worden meegenomen. Onze inspecteur kan geen zaken demonstreren, verwijderen of beschadigen om eventueel niet-zichtbare gebreken te constateren.\n\nDe levertermijn van het bouwkundig rapport gaat na uitlevering van de inspectie en na ontvangst van alle aangeleverde technische gegevens. Wij zijn daarin vriendelijk van de reactiesnelheid van de diebetreffende verkoopmakelaar.\n\n### Arbeidsomstandigheden:\n\nVoor alle inspecties is een droge en minimaal vrije kruiphoogte van 0,50 meter vereist. De kruipruimte dient daarvoor zonder gevaar toegankelijk te zijn. Wanneer u als opdrachtgever niet aanwezig bent bij een inspectie, geldt dat een derde partij aanwezig is bij de inspectie, kan de aannemer in de directe omgeving van het kruipruimte worden geïnspecteerd.\n\nBalkons, goten en overstekken tot een maximale hoogte van ca. 2,6 meter of verdiepingshoogten worden geïnspecteerd, indien veilig bereikbaar van uit een ladder. Hoger gelegen elementen worden uitsluitend geïnspecteerd met de daarvoor beschikbare veilige middelen op opdrachtnemer.\n\nIndien tijdens inspectie blijkt dat bepaalde objecten of elementen voor moeilijk of gevaarlijk bereikbaar zijn, kunnen wij deze alleen maar visueel beoordelen.\n\n### Prijs van de aankoop/verkoopkeuring:\n\n- € 345,- (incl. BTW) objecten tot 500m³\n- € 395,- (incl. BTW) objecten 500 tot 1000m³\n\nObjecten zoals scholen, kerken, ziekenhuizen enzovoort; daar maken we een passende aanbieding voor aan de hand van het aantal m³."
     }
-  ]
+  ],
+  "metadata": {
+    "titel": "Aankoopkeuring en verkoopkeuring woning | De Smidse BTA",
+    "beschrijving": "Weet wat u koopt voordat u tekent. Een bouwkundige aan- of verkoopkeuring door een erkend woninginspecteur, met rapport voor uw hypotheek en NHG."
+  }
 }

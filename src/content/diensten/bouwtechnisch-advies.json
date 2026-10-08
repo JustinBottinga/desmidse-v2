@@ -5,8 +5,6 @@
   "subtitel": "Jeroen Klikkert",
   "intro": "De Smidse BTA voert diverse bouwtechnische keuringen uit voor particulieren en bedrijven. Wij bieden het gemak en efficiëntie binnen het kopen, verkopen, verhuizen, verbouwen of onderhoud aan uw woning of bedrijfspand. De Smidse BTA is het aanspreekpunt voor alle diensten die worden aangeboden tijdens dit proces. Wij houden u op de hoogte van de voortgang van alle stappen die aan bod komen.",
   "afbeelding": "/media/uploads/hero-placeholder.svg",
-  "metaTitel": "Bouwtechnisch advies en woningkeuringen | De Smidse BTA",
-  "metaBeschrijving": "Onafhankelijk bouwtechnisch advies voor particulieren en bedrijven in Daarlerveen en omgeving: kopen, verkopen, verbouwen of onderhoud. Eén aanspreekpunt.",
   "secties": [
     {
       "kop": "Onze werkwijze",
@@ -47,5 +45,9 @@
         }
       ]
     }
-  ]
+  ],
+  "metadata": {
+    "titel": "Bouwtechnisch advies en woningkeuringen | De Smidse BTA",
+    "beschrijving": "Onafhankelijk bouwtechnisch advies voor particulieren en bedrijven in Daarlerveen en omgeving: kopen, verkopen, verbouwen of onderhoud. Eén aanspreekpunt."
+  }
 }

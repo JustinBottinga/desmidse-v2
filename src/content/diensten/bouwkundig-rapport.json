@@ -5,8 +5,6 @@
   "subtitel": "NTA 8060/NEN 2767",
   "intro": "Het NTA 8060 rapport is een normering om op een objectieve visuele manier en op een eenvoudige wijze de integrale technische kwaliteit van een woning, of bedrijfspand te beoordelen en deze vast te leggen in een NTA bouwkundig rapport. Hierdoor bent u verzekerd van een rapport dat geschikt is voor aankoop/verkoop en het verkrijgen van een hypotheek met Nationale Hypotheek Garantie. Dit rapport geeft u een duidelijk inzicht in de technische staat van uw woning of bedrijfspand en geeft ook direct de staat van het onderhoud aan.",
   "afbeelding": "/media/uploads/hero-placeholder.svg",
-  "metaTitel": "Bouwkundig rapport NTA 8060 met NHG | De Smidse BTA",
-  "metaBeschrijving": "Bouwkundig NTA 8060-rapport voor aankoop, verkoop en hypotheek met Nationale Hypotheek Garantie. Duidelijk inzicht in staat en onderhoud van uw woning.",
   "secties": [
     {
       "kop": "Rapport voor verkrijgen NHG-garantie",
@@ -21,5 +19,9 @@
         }
       ]
     }
-  ]
+  ],
+  "metadata": {
+    "titel": "Bouwkundig rapport NTA 8060 met NHG | De Smidse BTA",
+    "beschrijving": "Bouwkundig NTA 8060-rapport voor aankoop, verkoop en hypotheek met Nationale Hypotheek Garantie. Duidelijk inzicht in staat en onderhoud van uw woning."
+  }
 }
