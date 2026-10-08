@@ -40,6 +40,24 @@
         "label": "Licentie Keurmerk",
         "tekst": "Actuele keurmerken en periodieke controles helpen om de kwaliteit en betrouwbaarheid van inspecties en inspecteurs te waarborgen."
       }
+    ],
+    "logos": [
+      {
+        "afbeelding": "/media/uploads/keurmerk-sertum-instituut.png",
+        "alt": "Sertum, Instituut Onderhoudskundigen Vastgoed"
+      },
+      {
+        "afbeelding": "/media/uploads/keurmerk-sertum-geregistreerd.jpg",
+        "alt": "Sertum geregistreerd"
+      },
+      {
+        "afbeelding": "/media/uploads/keurmerk-energielabel.jpg",
+        "alt": "Energielabel A++"
+      },
+      {
+        "afbeelding": "/media/uploads/keurmerk-iwi.jpg",
+        "alt": "IWI, Integraal Woninginspecteur"
+      }
     ]
   }
 }

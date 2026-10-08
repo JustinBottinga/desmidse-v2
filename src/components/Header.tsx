@@ -2,6 +2,19 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { services } from "@/lib/diensten";
+import { isExternalLink, site, type NavItem } from "@/lib/site";
+
+const desktopLink = ({ isActive }: { isActive: boolean }) =>
+  cn(
+    "text-sm font-medium transition-colors",
+    isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground",
+  );
+
+const mobileLink = ({ isActive }: { isActive: boolean }) =>
+  cn(
+    "block rounded-sm px-2 py-2 text-sm",
+    isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground",
+  );
 
 export default function Header() {
   const { pathname } = useLocation();
@@ -27,138 +40,139 @@ export default function Header() {
     };
   }, []);
 
-  const dienstenActive = pathname.startsWith("/diensten");
+  const items = site.navigatie.items;
+  const logoStyle = site.navigatie.logoStijl ?? "klein";
+  const logoSmall = site.navigatie.logoKlein || "/media/logo.png";
+  const logoText = site.navigatie.logoTekst || site.metadata.siteNaam;
+  const closeAll = () => {
+    setOpen(false);
+    setMobileOpen(false);
+  };
+
+  function renderLink(
+    item: NavItem,
+    className: ({ isActive }: { isActive: boolean }) => string,
+  ) {
+    if (isExternalLink(item.link)) {
+      return (
+        <a
+          href={item.link}
+          className={className({ isActive: false })}
+          onClick={closeAll}
+        >
+          {item.label}
+        </a>
+      );
+    }
+    return (
+      <NavLink
+        to={item.link}
+        end={item.link === "/"}
+        className={className}
+        onClick={closeAll}
+      >
+        {item.label}
+      </NavLink>
+    );
+  }
 
   return (
     <nav className="border-b relative z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <Link to="/" className="font-semibold tracking-tight text-foreground">
-            <img
-              src="/media/logo.png"
-              alt="De Smidse BTA logo"
-              className="h-8 w-auto mr-3 object-contain"
-            />
+        <div className="flex items-center justify-between min-h-16 py-2">
+          <Link
+            to="/"
+            className="flex items-center font-semibold tracking-tight text-foreground"
+            onClick={closeAll}
+          >
+            {logoStyle === "groot" ? (
+              <img
+                src={site.navigatie.logoGroot || logoSmall}
+                alt={logoText}
+                className="h-12 w-auto max-w-[60vw] object-contain md:h-14"
+              />
+            ) : (
+              <>
+                <img
+                  src={logoSmall}
+                  alt={logoStyle === "klein" ? logoText : ""}
+                  className="h-8 w-auto mr-3 object-contain"
+                />
+                {logoStyle === "klein-tekst" ? <span>{logoText}</span> : null}
+              </>
+            )}
           </Link>
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-6">
-            <NavLink
-              to="/"
-              end
-              className={({ isActive }) =>
-                cn(
-                  "text-sm font-medium transition-colors",
-                  isActive
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground",
-                )
+            {items.map((item) => {
+              if (!item.dropdown) {
+                return <div key={item.label}>{renderLink(item, desktopLink)}</div>;
               }
-            >
-              Home
-            </NavLink>
-
-            <NavLink
-              to="/over-mij"
-              className={({ isActive }) =>
-                cn(
-                  "text-sm font-medium transition-colors",
-                  isActive
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground",
-                )
-              }
-            >
-              Over mij
-            </NavLink>
-
-            {/* <NavLink
-              to="/blog"
-              className={({ isActive }) =>
-                cn(
-                  "text-sm font-medium transition-colors",
-                  isActive
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground",
-                )
-              }
-            >
-              Blog
-            </NavLink> */}
-
-            {/* Onze diensten dropdown (custom, no Radix) */}
-            <div className="relative" ref={menuRef}>
-              <button
-                type="button"
-                className={cn(
-                  "inline-flex items-center text-sm font-medium transition-colors",
-                  dienstenActive || open
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground",
-                )}
-                aria-haspopup="menu"
-                aria-expanded={open}
-                onClick={() => setOpen((v) => !v)}
-              >
-                Onze diensten
-                <svg
-                  className={cn(
-                    "ml-2 h-3 w-3 transition-transform",
-                    open ? "rotate-180" : "rotate-0",
+              const active =
+                !!item.link && item.link !== "/" && pathname.startsWith(item.link);
+              return (
+                // Dropdown met de diensten (custom, no Radix)
+                <div className="relative" ref={menuRef} key={item.label}>
+                  <button
+                    type="button"
+                    className={cn(
+                      "inline-flex items-center text-sm font-medium transition-colors",
+                      active || open
+                        ? "text-foreground"
+                        : "text-muted-foreground hover:text-foreground",
+                    )}
+                    aria-haspopup="menu"
+                    aria-expanded={open}
+                    onClick={() => setOpen((v) => !v)}
+                  >
+                    {item.label}
+                    <svg
+                      className={cn(
+                        "ml-2 h-3 w-3 transition-transform",
+                        open ? "rotate-180" : "rotate-0",
+                      )}
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                  {open && (
+                    <div
+                      role="menu"
+                      className="absolute left-0 top-full mt-2 w-[320px] z-50 rounded-md border bg-popover text-popover-foreground shadow-md"
+                    >
+                      <ul className="p-1">
+                        {services.map((service) => (
+                          <li key={service.href}>
+                            <NavLink
+                              to={service.href}
+                              className={({ isActive }) =>
+                                cn(
+                                  "block rounded-sm px-3 py-2 text-sm transition-colors",
+                                  isActive
+                                    ? "bg-accent text-accent-foreground"
+                                    : "text-muted-foreground hover:bg-accent hover:text-accent-foreground",
+                                )
+                              }
+                              onClick={closeAll}
+                            >
+                              {service.label}
+                            </NavLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   )}
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </button>
-              {open && (
-                <div
-                  role="menu"
-                  className="absolute left-0 top-full mt-2 w-[320px] z-50 rounded-md border bg-popover text-popover-foreground shadow-md"
-                >
-                  <ul className="p-1">
-                    {services.map((service) => (
-                      <li key={service.href}>
-                        <NavLink
-                          to={service.href}
-                          className={({ isActive }) =>
-                            cn(
-                              "block rounded-sm px-3 py-2 text-sm transition-colors",
-                              isActive
-                                ? "bg-accent text-accent-foreground"
-                                : "text-muted-foreground hover:bg-accent hover:text-accent-foreground",
-                            )
-                          }
-                          onClick={() => setOpen(false)}
-                        >
-                          {service.label}
-                        </NavLink>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
-              )}
-            </div>
-
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                cn(
-                  "text-sm font-medium transition-colors",
-                  isActive
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground",
-                )
-              }
-            >
-              Contact
-            </NavLink>
+              );
+            })}
           </div>
           {/* Mobile toggle */}
           <button
@@ -195,74 +209,31 @@ export default function Header() {
       {mobileOpen && (
         <div className="md:hidden border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 space-y-1">
-            <NavLink
-              to="/"
-              end
-              className={({ isActive }) =>
-                cn(
-                  "block rounded-sm px-2 py-2 text-sm",
-                  isActive
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground",
-                )
+            {items.map((item) => {
+              if (!item.dropdown) {
+                return <div key={item.label}>{renderLink(item, mobileLink)}</div>;
               }
-              onClick={() => setMobileOpen(false)}
-            >
-              Home
-            </NavLink>
-            <NavLink
-              to="/over-mij"
-              className={({ isActive }) =>
-                cn(
-                  "block rounded-sm px-2 py-2 text-sm",
-                  isActive
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground",
-                )
-              }
-              onClick={() => setMobileOpen(false)}
-            >
-              Over mij
-            </NavLink>
-            <div>
-              <div className="px-2 py-2 text-sm font-medium text-muted-foreground">
-                Onze diensten
-              </div>
-              <ul className="pl-2">
-                {services.map((service) => (
-                  <li key={service.href}>
-                    <NavLink
-                      to={service.href}
-                      className={({ isActive }) =>
-                        cn(
-                          "block rounded-sm px-2 py-2 text-sm",
-                          isActive
-                            ? "text-foreground"
-                            : "text-muted-foreground hover:text-foreground",
-                        )
-                      }
-                      onClick={() => setMobileOpen(false)}
-                    >
-                      {service.label}
-                    </NavLink>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                cn(
-                  "block rounded-sm px-2 py-2 text-sm",
-                  isActive
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground",
-                )
-              }
-              onClick={() => setMobileOpen(false)}
-            >
-              Contact
-            </NavLink>
+              return (
+                <div key={item.label}>
+                  <div className="px-2 py-2 text-sm font-medium text-muted-foreground">
+                    {item.label}
+                  </div>
+                  <ul className="pl-2">
+                    {services.map((service) => (
+                      <li key={service.href}>
+                        <NavLink
+                          to={service.href}
+                          className={mobileLink}
+                          onClick={closeAll}
+                        >
+                          {service.label}
+                        </NavLink>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
           </div>
         </div>
       )}

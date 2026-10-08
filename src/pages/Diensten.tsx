@@ -2,11 +2,17 @@ import { useParams, Link } from "react-router-dom";
 import Hero from "@/components/Hero";
 import Sections from "@/components/Sections";
 import { diensten, getDienstBySlug } from "@/lib/content";
+import { usePageMeta } from "@/lib/usePageMeta";
 import overzicht from "@/content/pages/diensten.json";
 
 export default function Diensten() {
   const { slug } = useParams<{ slug?: string }>();
   const dienst = slug ? getDienstBySlug(slug) : undefined;
+
+  usePageMeta(
+    dienst ?? overzicht,
+    dienst ? `/diensten/${dienst.slug}` : "/diensten",
+  );
 
   return (
     <>

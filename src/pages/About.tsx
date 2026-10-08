@@ -1,8 +1,18 @@
 import Hero from "@/components/Hero";
 import Sections from "@/components/Sections";
 import about from "@/content/pages/about.json";
+import { usePageMeta } from "@/lib/usePageMeta";
 
 export default function About() {
+  usePageMeta(
+    {
+      titel: about.hero.titel,
+      intro: about.hero.intro,
+      afbeelding: about.hero.afbeelding,
+    },
+    "/over-mij",
+  );
+
   return (
     <>
       <Hero

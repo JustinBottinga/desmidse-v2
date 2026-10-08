@@ -1,13 +1,7 @@
 import Markdown from "@/components/Markdown";
+import ColumnGrid from "@/components/ColumnGrid";
 import { cn } from "@/lib/utils";
 import type { ContentSection } from "@/lib/content";
-
-const gridForColumns: Record<number, string> = {
-  1: "",
-  2: "md:grid-cols-2",
-  3: "md:grid-cols-3",
-  4: "sm:grid-cols-2 lg:grid-cols-4",
-};
 
 export default function Sections({ secties }: { secties?: ContentSection[] }) {
   if (!secties?.length) return null;
@@ -33,12 +27,7 @@ export default function Sections({ secties }: { secties?: ContentSection[] }) {
               ) : null}
 
               {kolommen.length ? (
-                <div
-                  className={cn(
-                    "grid grid-cols-1 gap-8",
-                    gridForColumns[Math.min(kolommen.length, 4)]
-                  )}
-                >
+                <ColumnGrid>
                   {kolommen.map((kolom, kolomIndex) => (
                     <div key={kolomIndex}>
                       {kolom.label ? (
@@ -49,7 +38,7 @@ export default function Sections({ secties }: { secties?: ContentSection[] }) {
                       <Markdown>{kolom.tekst}</Markdown>
                     </div>
                   ))}
-                </div>
+                </ColumnGrid>
               ) : null}
 
               {sectie.tekst ? (

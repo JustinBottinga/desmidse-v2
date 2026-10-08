@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { usePageMeta } from "@/lib/usePageMeta";
 
 export default function NotFound() {
+  usePageMeta({ metadata: { titel: "Pagina niet gevonden | De Smidse BTA" } }, "/");
+
   return (
     <div className="flex min-h-[60vh] items-center justify-center px-4 py-16">
       <div className="w-full max-w-xl text-center">
