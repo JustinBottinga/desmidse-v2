@@ -3,7 +3,7 @@ type HeroProps = {
   title: string;
   subtitle?: string;
   paragraph?: string;
-  heightClassName?: string; // allow override e.g., h-80 lg:h-96
+  heightClassName?: string; // allow override e.g., min-h-80 lg:min-h-96
 };
 
 export function Hero({
@@ -13,17 +13,19 @@ export function Hero({
   paragraph,
   heightClassName,
 }: HeroProps) {
-  const h = heightClassName ?? "h-64 md:h-80 lg:h-96";
+  // min-h in plaats van een vaste hoogte: lange introteksten lopen op mobiel
+  // anders over de rand van de header heen.
+  const h = heightClassName ?? "min-h-64 md:min-h-80 lg:min-h-96";
   return (
     <section className="relative w-full">
-      <div className={`relative ${h}`}>
+      <div className={`relative flex ${h}`}>
         <img
           src={image}
           alt=""
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-end pt-12 pb-8">
           <div className="space-y-2 text-white">
             {subtitle ? (
               <div className="text-sm/6 tracking-wide uppercase text-white/80">

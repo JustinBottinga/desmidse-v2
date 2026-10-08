@@ -1,6 +1,9 @@
 import contact from "@/content/pages/contact.json";
+import { usePageMeta } from "@/lib/usePageMeta";
 
 export default function Contact() {
+  usePageMeta({ titel: contact.titel }, "/contact");
+
   const address = `${contact.adres.straat}, ${contact.adres.postcode} ${contact.adres.plaats}`;
 
   return (

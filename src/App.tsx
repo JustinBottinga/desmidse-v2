@@ -7,7 +7,7 @@ export default function App() {
   return (
     <div className="min-h-svh flex flex-col">
       <Header />
-      <main className="flex-1 container mx-auto p-4">
+      <main className="flex-1">
         <Breadcrumbs />
         <Outlet />
       </main>

@@ -74,7 +74,7 @@ export default function Breadcrumbs() {
   // Render
   if (hide) return null;
   return (
-    <nav aria-label="Breadcrumb" className="py-2 text-sm italic">
+    <nav aria-label="Breadcrumb" className="mx-auto max-w-7xl px-4 py-2 text-sm italic sm:px-6 lg:px-8">
       <ol className="flex items-center gap-1 text-muted-foreground">
         {crumbs.map((c, idx) => {
           const isLast = idx === crumbs.length - 1;

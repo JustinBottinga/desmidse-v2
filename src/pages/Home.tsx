@@ -1,9 +1,14 @@
 import { Button } from "@/components/ui/button";
 import Markdown from "@/components/Markdown";
 import { Building2, ClipboardList } from "lucide-react";
+import ColumnGrid from "@/components/ColumnGrid";
+import LogoStrip from "@/components/LogoStrip";
 import home from "@/content/pages/home.json";
+import { usePageMeta } from "@/lib/usePageMeta";
 
 export default function Home() {
+  usePageMeta({}, "/");
+
   return (
     <div className="bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-20">
@@ -59,7 +64,7 @@ export default function Home() {
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
           {home.keurmerken.kop}
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <ColumnGrid>
           {home.keurmerken.kolommen.map((kolom) => (
             <div key={kolom.label}>
               <h3 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-3">
@@ -68,7 +73,8 @@ export default function Home() {
               <Markdown>{kolom.tekst}</Markdown>
             </div>
           ))}
-        </div>
+        </ColumnGrid>
+        <LogoStrip logos={home.keurmerken.logos} />
       </div>
     </div>
   );

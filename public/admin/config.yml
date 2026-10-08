@@ -73,6 +73,20 @@ collections:
                 fields:
                   - { label: "Label", name: "label", widget: "string" }
                   - { label: "Tekst", name: "tekst", widget: "markdown" }
+              - label: "Logo's onder de kolommen"
+                name: "logos"
+                widget: "list"
+                required: false
+                summary: "{{fields.alt}}"
+                hint: "Worden als vierkante vlakken naast elkaar getoond."
+                fields:
+                  - { label: "Afbeelding", name: "afbeelding", widget: "image" }
+                  - {
+                      label: "Alternatieve tekst",
+                      name: "alt",
+                      widget: "string",
+                      hint: "Beschrijf het logo, voor screenreaders.",
+                    }
 
   - name: "over-mij"
     label: "Over mij"
@@ -268,6 +282,32 @@ collections:
               default: false,
             }
 
+      - label: "Metadata (zoekmachines en deelknoppen)"
+        name: "metadata"
+        widget: "object"
+        collapsed: true
+        required: false
+        hint: "Optioneel. Leeg laten = titel en introtekst van de pagina worden gebruikt."
+        fields:
+          - label: "Meta-titel"
+            name: "titel"
+            widget: "string"
+            required: false
+            hint: "De titel in Google en in het tabblad. Ideaal tot 60 tekens. Leeg = Titel + sitenaam."
+            pattern: ["^.{0,70}$", "Maximaal 70 tekens"]
+          - label: "Meta-beschrijving"
+            name: "beschrijving"
+            widget: "text"
+            required: false
+            hint: "De tekst onder de titel in Google. Ideaal 120 tot 155 tekens. Leeg = de introtekst."
+            pattern: ["^(.|
+){0,170}$", "Maximaal 170 tekens"]
+          - label: "Meta-afbeelding"
+            name: "afbeelding"
+            widget: "image"
+            required: false
+            hint: "Afbeelding bij delen via WhatsApp, LinkedIn e.d. Leeg = header-afbeelding of standaardafbeelding."
+
   - name: "overige-paginas"
     label: "Overige pagina's"
     label_singular: "Pagina"
@@ -278,3 +318,150 @@ collections:
         fields:
           - { label: "Titel", name: "titel", widget: "string" }
           - { label: "Introtekst", name: "intro", widget: "text" }
+          - label: "Metadata (zoekmachines en deelknoppen)"
+            name: "metadata"
+            widget: "object"
+            collapsed: true
+            required: false
+            hint: "Optioneel. Leeg laten = titel en introtekst van de pagina worden gebruikt."
+            fields:
+              - label: "Meta-titel"
+                name: "titel"
+                widget: "string"
+                required: false
+                hint: "De titel in Google en in het tabblad. Ideaal tot 60 tekens. Leeg = Titel + sitenaam."
+                pattern: ["^.{0,70}$", "Maximaal 70 tekens"]
+              - label: "Meta-beschrijving"
+                name: "beschrijving"
+                widget: "text"
+                required: false
+                hint: "De tekst onder de titel in Google. Ideaal 120 tot 155 tekens. Leeg = de introtekst."
+                pattern: ["^(.|
+){0,170}$", "Maximaal 170 tekens"]
+              - label: "Meta-afbeelding"
+                name: "afbeelding"
+                widget: "image"
+                required: false
+                hint: "Afbeelding bij delen via WhatsApp, LinkedIn e.d. Leeg = header-afbeelding of standaardafbeelding."
+
+  - name: "instellingen"
+    label: "Navigatie en footer"
+    label_singular: "Instelling"
+    files:
+      - name: "site"
+        label: "Navigatie, footer en standaard metadata"
+        file: "src/content/site.json"
+        fields:
+          - label: "Navigatie (menu bovenin)"
+            name: "navigatie"
+            widget: "object"
+            fields:
+              - label: "Logo-stijl"
+                name: "logoStijl"
+                widget: "select"
+                default: "klein"
+                options:
+                  - { label: "Klein logo met tekst (naam als tekst naast het logo)", value: "klein-tekst" }
+                  - { label: "Klein logo, zonder tekst", value: "klein" }
+                  - { label: "Groot logo (de tekst zit in de afbeelding)", value: "groot" }
+              - {
+                  label: "Klein logo",
+                  name: "logoKlein",
+                  widget: "image",
+                  required: false,
+                  hint: "Pictogram of klein logo, ongeveer 32 px hoog getoond. Leeg = standaardlogo.",
+                }
+              - {
+                  label: "Groot logo (met tekst)",
+                  name: "logoGroot",
+                  widget: "image",
+                  required: false,
+                  hint: "Alleen voor de stijl Groot. Gebruik een logo waar de bedrijfsnaam al in staat, liefst PNG of SVG met transparante achtergrond.",
+                }
+              - {
+                  label: "Logotekst",
+                  name: "logoTekst",
+                  widget: "string",
+                  required: false,
+                  hint: "De tekst naast het kleine logo, en de alt-tekst van het logo. Leeg = sitenaam.",
+                }
+              - label: "Menu-items"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.label}}"
+                hint: "Volgorde = volgorde in het menu. Sleep om te verplaatsen."
+                fields:
+                  - { label: "Tekst", name: "label", widget: "string" }
+                  - {
+                      label: "Link",
+                      name: "link",
+                      widget: "string",
+                      hint: "Pagina op deze site, bijvoorbeeld /contact, of een volledig adres (https://...).",
+                    }
+                  - {
+                      label: "Diensten uitklappen",
+                      name: "dropdown",
+                      widget: "boolean",
+                      required: false,
+                      default: false,
+                      hint: "Aan = onder dit item verschijnt een uitklapmenu met alle diensten. De link wordt dan niet gebruikt.",
+                    }
+
+          - label: "Footer (onderaan)"
+            name: "footer"
+            hint: "Adres, telefoon en e-mail in de footer pas je aan onder Contact."
+            widget: "object"
+            fields:
+              - {
+                  label: "Diensten tonen",
+                  name: "toonDiensten",
+                  widget: "boolean",
+                  required: false,
+                  default: true,
+                }
+              - { label: "Kop diensten", name: "dienstenKop", widget: "string" }
+              - { label: "Kop pagina's", name: "paginaKop", widget: "string" }
+              - label: "Pagina-links"
+                name: "paginaLinks"
+                widget: "list"
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Tekst", name: "label", widget: "string" }
+                  - {
+                      label: "Link",
+                      name: "link",
+                      widget: "string",
+                      hint: "Bijvoorbeeld /contact of https://...",
+                    }
+              - {
+                  label: "Regel onderaan",
+                  name: "onderregel",
+                  widget: "string",
+                  required: false,
+                  hint: "Bijvoorbeeld een copyright- of voorwaardenregel. Leeg = niet tonen.",
+                }
+
+          - label: "Standaard metadata"
+            name: "metadata"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {
+                  label: "Website-adres",
+                  name: "siteUrl",
+                  widget: "string",
+                  hint: "Zonder slash aan het eind, bijvoorbeeld https://www.desmidsebta.nl",
+                }
+              - { label: "Sitenaam", name: "siteNaam", widget: "string" }
+              - {
+                  label: "Standaardbeschrijving",
+                  name: "standaardBeschrijving",
+                  widget: "text",
+                  hint: "Wordt gebruikt voor pagina's zonder eigen meta-beschrijving.",
+                }
+              - {
+                  label: "Standaardafbeelding",
+                  name: "standaardAfbeelding",
+                  widget: "image",
+                  required: false,
+                }
