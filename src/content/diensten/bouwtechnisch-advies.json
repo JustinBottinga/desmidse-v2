@@ -23,27 +23,6 @@
         }
       ],
       "scheidingslijn": true
-    },
-    {
-      "kop": "De branche erkende keurmerken van De Smidse BTA",
-      "kolommen": [
-        {
-          "label": "IWI Woning Inspecteurs",
-          "tekst": "Het uitvoeren van inspecties is belangrijk en goed inzicht te geven in de staat van onderhoud van een woning. De kwaliteit van de uitgevoerde inspectie is daartoe van groot belang. De gevolgen van een rapport kunnen immers groot zijn en elk bouwkundig rapport moet een inspecteur aantoonbaar competent zijn en blijven op alle voor de inspectie relevante gebieden."
-        },
-        {
-          "label": "Instituut Onderhoudsdiendingers",
-          "tekst": "Sertium is het enige onafhankelijke register voor erkende onderhoudstechnisch deskundigen in Nederland. Onze vakbekwaamheid staat onze kwaliteit in alles wat we doen. Onafhankelijkheid is belangrijk voor ons. De operationele taken van Sertium worden door een stichtingbureau uitgevoerd onder toezicht van het bestuur."
-        },
-        {
-          "label": "Certificerende Onderhoudsverzekeringen",
-          "tekst": "Sertium heeft duo het continu verbeteren van het niveau van vastgoedonderhoud als technisch beheer. De deskundigheid van de onderhoudsprofessionals die in het Sertium register als thuisinspecteur wordt gewaarborgd via de competentieaanwijzingen."
-        },
-        {
-          "label": "Licentie Keurmerk",
-          "tekst": "Actuele keurmerken en periodieke controle helpen om de kwaliteit en betrouwbaarheid van inspecties te waarborgen."
-        }
-      ]
     }
   ]
 }
