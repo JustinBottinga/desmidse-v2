@@ -5,7 +5,7 @@
     "items": [
       "Bouwtechnisch advies",
       "Aan- en verkoopkeuring",
-      "Meeloopkeuring",
+      "Meeloop-keuring",
       "Opleveringskeuring",
       "Nulmeting",
       "Bouwkundig consult",
@@ -19,10 +19,10 @@
     "tekst": "De Smidse BTA voert diverse bouwtechnische keuringen uit voor particulieren en bedrijven. Wij bieden het gemak en efficientie binnen het kopen, verkopen, verhuizen, verbouwen of onderhoud aan uw woning of bedrijfspand. De Smidse BTA is het aanspreekpunt voor alle diensten die worden aangeboden tijdens dit proces. Wij houden u op de hoogte van de voortgang van alle stappen die aan bod komen."
   },
   "belKaart": {
-    "kop": "Vermijd discussies en onnodige hoge kosten",
+    "kop": "Vermijd discussies en onnodig hoge kosten",
     "telefoonLabel": "Bel 06-29080748",
     "telefoonNummer": "0629080748",
-    "tekst": "Ik sta u graag te woord en samen komen we tot een mooie oplossing.",
+    "tekst": "Ik sta u graag te woord en samen komen we tot een goede oplossing.",
     "knopLabel": "Bel nu"
   },
   "keurmerken": {
@@ -39,6 +39,10 @@
       {
         "label": "Licentie Keurmerk",
         "tekst": "Actuele keurmerken en periodieke controles helpen om de kwaliteit en betrouwbaarheid van inspecties en inspecteurs te waarborgen."
+      },
+      {
+        "label": "Certigo register",
+        "tekst": "CETIGO registratie laat zien dat een IWI tot de besten hoort in het werkgebied binnen gebouwbeheer, inspectie en onderhoud. Vermelding in het CETIGO register biedt opdrachtgevers en marktpartijen het vertrouwen dat nodig is in deze snelgroeiende en zich altijd ontwikkelende markt."
       }
     ]
   }
