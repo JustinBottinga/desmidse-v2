@@ -1,10 +1,10 @@
 {
   "volgorde": 2,
-  "menuLabel": "Aan- en Verkoopkeuring",
-  "titel": "Aan- en Verkoopkeuring",
+  "menuLabel": "Aan- en verkoopkeuring",
+  "titel": "Aan- en verkoopkeuring",
   "subtitel": "De woning van uw dromen gevonden? ",
   "intro": "Als u de woning van uw dromen gevonden heeft dan kan het afsluiten van een lening (en beslissing van een verbouwing aan uw woning) een bouwkundige keuring vereist zijn. De kredietverstrekker wil ook graag de huidige staat van het huis en eventuele verbouwingskosten weten... u natuurlijk ook! Onze inspecteurs helpen u hier graag mee.",
-  "afbeelding": "/media/uploads/huis-droom.jpg",
+  "afbeelding": "/media/uploads/inspect.jpg",
   "secties": [
     {
       "kop": "Wij helpen u met:",
@@ -14,11 +14,11 @@
           "tekst": "Een aankoopkeuring voorkomt de koop van een woning met bouwkundige gebreken, die u veel geld kunnen gaan kosten. Middels deze aankoopkeuring kunnen wij u inzicht geven in het onderhoud dat u de komende 5 jaar kunt verwachten. Ook kunnen wij een prijsindicatie geven van het te verwachten onderhoud."
         },
         {
-          "label": "Veilig en Zonder Problemen",
+          "label": "Veilig en zonder problemen",
           "tekst": "Maak van de aankoop van uw woning of bedrijfspand geen risico. Met een aankoopkeuring van De Smidse BTA koopt u veilig en zonder problemen:\n\n- volledig onafhankelijk\n- NHG geschikt\n- Rapport 5 dagen na inspectie\n- Hersteladvies in duidelijke begrijpelijke taal\n- Kostenramingen direct herstel en op termijn"
         },
         {
-          "label": "Informatie Vooraf",
+          "label": "Informatie vooraf",
           "tekst": "Alle aspecten die met het oog waarneembaar zijn, worden meegenomen. Onze inspecteur kan geen zaken demonstreren, verwijderen of beschadigen om eventueel niet-zichtbare gebreken te constateren. De levertermijn van het bouwkundig rapport gaat tot na uitlevering van de inspectie en na ontvangst van alle aangeleverde technische gegevens. Wij zijn daarin vriendelijk van de reactiesnelheid van de diebetreffende verkoopmakelaar."
         }
       ]
